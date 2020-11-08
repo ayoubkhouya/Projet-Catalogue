@@ -3,6 +3,8 @@
   User: Ayoub KHOUYA | Hamza HRAMCHI
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<link rel="icon" href="./assets/images/logo.png" />
+
 <%@include file="pages/template/header.jsp"%>
 <div class="container">
     <h1>
