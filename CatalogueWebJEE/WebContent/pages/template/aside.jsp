@@ -5,7 +5,6 @@
   Time: 16:45
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -14,10 +13,10 @@
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#">Connexion</a>
-    <a href="#">CrÃ©er compte</a>
+    <a href="#">Créer compte</a>
 </div>
 
-<span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; CrÃ©er compte/Connexion</span>
+<span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Créer compte/Connexion</span>
 
 <script>
     function openNav() {
