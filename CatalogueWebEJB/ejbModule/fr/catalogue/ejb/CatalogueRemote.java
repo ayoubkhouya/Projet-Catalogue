@@ -1,8 +1,10 @@
 package fr.catalogue.ejb;
 
+import fr.catalogue.beans.CategorieBean;
+
 import javax.ejb.Remote;
 
 @Remote
 public interface CatalogueRemote {
-     String getCategory(String name);
+     CategorieBean getCategory(String name);
 }
