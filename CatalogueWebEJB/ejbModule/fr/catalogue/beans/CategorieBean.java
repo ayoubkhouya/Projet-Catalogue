@@ -12,7 +12,7 @@ public class CategorieBean implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "id")
-    private long id;
+    private int id;
 
     @Column(name = "nom")
     private String nom;
@@ -21,7 +21,7 @@ public class CategorieBean implements Serializable {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

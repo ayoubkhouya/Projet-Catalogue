@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CatalogueEAR.iml" filepath="$PROJECT_DIR$/CatalogueEAR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CatalogueWebEJB/CatalogueEJB.iml" filepath="$PROJECT_DIR$/../CatalogueWebEJB/CatalogueEJB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CatalogueWebJEE/CatalogueWebJEE.iml" filepath="$PROJECT_DIR$/../CatalogueWebJEE/CatalogueWebJEE.iml" />
+    </modules>
+  </component>
+</project>
