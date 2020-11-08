@@ -6,8 +6,8 @@
 <!-- Footer -->
 <footer class="page-footer font-small bg-secondary">
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© KHOUYA Ayoub | HRAMCHI Hamza
-        <a href="https://mdbootstrap.com/"> Catalogue web</a>
+    <div class="footer-copyright text-center py-3" style="max-height: 50%">
+        ©KHOUYA Ayoub | HRAMCHI Hamza
     </div>
     <!-- Copyright -->
 </footer>
