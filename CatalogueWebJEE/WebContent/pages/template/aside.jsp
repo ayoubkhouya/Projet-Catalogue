@@ -5,6 +5,8 @@
   Time: 16:45
   To change this template use File | Settings | File Templates.
 --%>
+<!<!doctype html>
+<html lang="fr">
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +19,7 @@
     <a href="#">Créer compte</a>
 </div>
 
-<span style="font-size:15px;cursor:pointer" onclick="openNav()">&#9776; Connexion/Créer compte</span>
+<span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Créer compte/Connexion</span>
 
 <script>
     function openNav() {
