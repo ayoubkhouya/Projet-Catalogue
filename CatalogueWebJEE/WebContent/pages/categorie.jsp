@@ -1,9 +1,6 @@
 <%--
-  Created by IntelliJ IDEA.
-  User: AYOUB
-  Date: 08/11/2020
-  Time: 11:10
-  To change this template use File | Settings | File Templates.
+  Created by IntelliJ IDEA | Eclips IDE.
+  User: Ayoub KHOUYA | Hamza HRAMCHI
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>

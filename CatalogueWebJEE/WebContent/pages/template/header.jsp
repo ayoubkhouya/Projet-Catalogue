@@ -1,9 +1,6 @@
 <%--
-  Created by IntelliJ IDEA.
+  Created by IntelliJ IDEA | Eclips IDE.
   User: Ayoub KHOUYA | Hamza HRAMCHI
-  Date: 08/11/2020
-  Time: 11:19
-  To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -17,7 +14,6 @@
 
 <header>
     <nav class="navbar navbar-expand-sm bg-light navbar-light">
-        <!-- Brand -->
         <a class="navbar-brand" href="#">
             <img src="../../assets/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
             Catalogue web
@@ -36,11 +32,6 @@
                 <a class="nav-link" href=""#>Panier</a>
             </li>
         </ul>
-        <!--- Form --->
-        <form class="form-inline my-2 my-lg-0 ml-15">
-            <button class="btn btn-outline-success my-2 my-sm-0">Connexion</button>
-            <button class="btn btn-outline-info my-2 my-sm-0">Inscription</button>
-        </form>
     </nav>
 </header>
 <body>
