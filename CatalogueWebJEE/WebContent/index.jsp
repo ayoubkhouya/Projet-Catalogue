@@ -9,4 +9,5 @@
         URL : <%= request.getAttribute("rObj") %>
     </h1>
 </div>
+
 <%@include file="pages/template/footer.jsp"%>
