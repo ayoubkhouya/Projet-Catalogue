@@ -10,9 +10,9 @@ import java.io.IOException;
 @WebServlet("/categorie")
 public class CategoriesServlet extends HttpServlet {
 
-    private static final long serialVersionUID = 4214547814660559772L;
+	private static final long serialVersionUID = -8349070857739843763L;
 
-    public CategoriesServlet() {
+	public CategoriesServlet() {
         super();
     }
 
