@@ -2,8 +2,8 @@
   Created by IntelliJ IDEA | Eclipse IDE.
   User: Ayoub KHOUYA | Hamza HRAMCHI
 --%>
-
-</body>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+</main>
 <!-- Footer -->
 <footer class="page-footer font-small bg-info">
     <!-- Copyright -->
@@ -14,4 +14,5 @@
 </footer>
 <!-- Footer -->
 <script src="./assets/js/bootstrap.js"></script>
+</body>
 </html>

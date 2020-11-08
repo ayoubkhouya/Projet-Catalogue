@@ -5,8 +5,10 @@
   Time: 11:10
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="pages/template/header.jsp"%>
-<body>
-    <H1> Hello In SHOP </H1>
-</body>
-<%@include file="pages/template/footer.jsp"%>
+<h1>
+    Hello Shop
+</h1>
+<%@include file="pages/template/header.jsp"%>
+
