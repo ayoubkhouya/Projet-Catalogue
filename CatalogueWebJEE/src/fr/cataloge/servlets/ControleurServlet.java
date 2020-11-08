@@ -1,6 +1,7 @@
 package fr.cataloge.servlets;
 
 import fr.cataloge.enums.CatalogueURI;
+import fr.cataloge.interfaces.RestController;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +13,7 @@ import java.io.IOException;
 @WebServlet(
         name = "ShopController",
         urlPatterns = {"home"})
-public class ControleurServlet extends HttpServlet {
+public class ControleurServlet extends HttpServlet implements RestController {
 
     private static final long serialVersionUID = 4214547814660559772L;
 
@@ -24,7 +25,7 @@ public class ControleurServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getRequestURI().equals(CatalogueURI.INDEX.getUri())) {
-            request.getRequestDispatcher("/index.jsp").forward(request, response);
+            doGetHome(request, response);
         }
     }
 
@@ -32,5 +33,11 @@ public class ControleurServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stub
         doGet(request, response);
+    }
+
+
+    @Override
+    public void doGetHome(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/index.jsp").forward(request, response);
     }
 }
