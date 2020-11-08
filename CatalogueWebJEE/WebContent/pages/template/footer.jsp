@@ -5,7 +5,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 </main>
 <!-- Footer -->
-<footer class="page-footer font-small bg-info">
+<footer class="page-footer font-small bg-secondary">
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© KHOUYA Ayoub | HRAMCHI Hamza
         <a href="https://mdbootstrap.com/"> Catalogue web</a>

@@ -9,4 +9,5 @@
         Hello Shop
     </h1>
 </div>
+
 <%@include file="pages/template/footer.jsp"%>
