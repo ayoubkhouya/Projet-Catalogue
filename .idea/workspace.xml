@@ -25,11 +25,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cf9c0fe-a6c8-4736-aa35-eaf93babdeb8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CatalogueWebJEE/WebContent/assets/images/cd.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CatalogueWebJEE/WebContent/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/CatalogueWebJEE/WebContent/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CatalogueWebJEE/WebContent/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/CatalogueWebJEE/WebContent/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CatalogueWebJEE/WebContent/pages/categorie.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/CatalogueWebJEE/WebContent/pages/categorie.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CatalogueWebJEE/WebContent/pages/template/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/CatalogueWebJEE/WebContent/pages/template/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CatalogueWebJEE/WebContent/pages/template/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/CatalogueWebJEE/WebContent/pages/template/header.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,17 +81,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="JBoss 20.0.1.Final1" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 20.0.1.Final1" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -236,6 +225,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604832209275</updated>
       <workItem from="1604832210995" duration="14632000" />
+      <workItem from="1604854999358" duration="753000" />
     </task>
     <servers />
   </component>
@@ -252,6 +242,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
