@@ -2,7 +2,6 @@
   Created by IntelliJ IDEA | Eclipse IDE.
   User: Ayoub KHOUYA | Hamza HRAMCHI
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 </body>
 <!-- Footer -->
@@ -14,5 +13,5 @@
     <!-- Copyright -->
 </footer>
 <!-- Footer -->
-<script src="../../assets/js/bootstrap.js"></script>
+<script src="./assets/js/bootstrap.js"></script>
 </html>

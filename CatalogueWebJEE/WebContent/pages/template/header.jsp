@@ -9,13 +9,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
 </head>
-
+<body>
 <header>
     <nav class="navbar navbar-expand-sm bg-light navbar-light">
         <a class="navbar-brand" href="#">
-            <img src="../../assets/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <img src="./assets/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
             Catalogue web
         </a>
 
@@ -34,5 +34,4 @@
         </ul>
     </nav>
 </header>
-<body>
 
