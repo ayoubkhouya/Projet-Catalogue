@@ -51,6 +51,9 @@
                     </a>
                 </li>
             </ul>
+            <span class="navbar-text">
+                <%@include file="aside.jsp"%>
+    </span>
         </div>
 
     </nav>

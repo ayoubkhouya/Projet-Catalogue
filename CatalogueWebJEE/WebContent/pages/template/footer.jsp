@@ -3,7 +3,6 @@
   User: Ayoub KHOUYA | Hamza HRAMCHI
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-</main>
 <!-- Footer -->
 <footer class="page-footer font-small bg-secondary">
     <!-- Copyright -->
