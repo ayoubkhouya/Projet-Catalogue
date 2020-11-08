@@ -44,7 +44,4 @@
     </nav>
 </header>
 <body>
-</body>
 
-<script src="../../assets/js/bootstrap.js"></script>
-</html>
