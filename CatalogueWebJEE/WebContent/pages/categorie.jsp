@@ -1,5 +1,5 @@
 <%--
-  Created by IntelliJ IDEA | Eclips IDE.
+  Created by IntelliJ IDEA | Eclipse IDE.
   User: Ayoub KHOUYA | Hamza HRAMCHI
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
