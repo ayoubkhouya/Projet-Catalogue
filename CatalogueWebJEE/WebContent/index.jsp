@@ -7,4 +7,4 @@
 <h1>
     Hello Shop
 </h1>
-<%@include file="pages/template/header.jsp"%>
+<%@include file="pages/template/footer.jsp"%>
