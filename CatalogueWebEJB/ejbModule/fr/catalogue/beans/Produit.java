@@ -3,6 +3,7 @@ package fr.catalogue.beans;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.Collection;
 
 @Entity
 @Table(schema = "catalogue", name = "produits")
@@ -30,14 +31,14 @@ public class Produit implements Serializable {
     @OneToOne
     private Categorie categorie;
 
-    @OneToOne
-    private Commande commande;
+    @OneToMany
+    private Collection<Commande> commande;
 
-    public Commande getCommande() {
+    public Collection<Commande> getCommande() {
         return commande;
     }
 
-    public void setCommande(Commande commande) {
+    public void setCommande(Collection<Commande> commande) {
         this.commande = commande;
     }
 
