@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import fr.catalogue.beans.CategorieBean;
+import fr.catalogue.beans.Categorie;
 import fr.catalogue.ejb.CatalogueRemote;
 
 import java.io.IOException;
@@ -32,7 +32,7 @@ public class CategoriesServlet extends HttpServlet {
         // TODO Auto-generated method stub
         HttpSession session = request.getSession(true);
         String type = request.getParameter("type");
-        CategorieBean categorieBean = null;
+        Categorie categorieBean = null;
 
         // Connexion JNDI (annuaire pour localiser l'EJB)
         try {

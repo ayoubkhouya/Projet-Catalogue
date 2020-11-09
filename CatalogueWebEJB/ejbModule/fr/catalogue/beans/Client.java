@@ -2,29 +2,33 @@ package fr.catalogue.beans;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Collection;
 
 @Entity
 @Table(schema = "catalogue", name = "client")
-public class ClientBean implements Serializable {
+public class Client implements Serializable {
 
     private static final long serialVersionUID = 570269912778275353L;
 
     @Id
     @GeneratedValue
-    @Column
+    @Column(nullable = false)
     private int id;
 
-    @Column
+    @Column(nullable = false)
     private String nom;
 
-    @Column
+    @Column(nullable = false)
     private String email;
 
-    @Column
+    @Column(nullable = false)
     private String telephone;
 
-    @Column
+    @Column(nullable = false)
     private String adresse;
+
+    @OneToMany
+    private Collection<Commande> commandes;
 
     public long getId() {
         return id;
@@ -64,5 +68,13 @@ public class ClientBean implements Serializable {
 
     public void setAdresse(String adresse) {
         this.adresse = adresse;
+    }
+
+    public Collection<Commande> getCommandes() {
+        return commandes;
+    }
+
+    public void setCommandes(Collection<Commande> commandes) {
+        this.commandes = commandes;
     }
 }

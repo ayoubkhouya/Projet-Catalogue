@@ -5,16 +5,16 @@ import java.io.Serializable;
 
 @Entity
 @Table(schema = "catalogue", name = "categories")
-public class CategorieBean implements Serializable {
+public class Categorie implements Serializable {
 
     private static final long serialVersionUID = 7215289928717677967L;
 
     @Id
     @GeneratedValue
-    @Column(name = "id")
+    @Column(nullable = false)
     private int id;
 
-    @Column(name = "nom")
+    @Column(nullable = false)
     private String nom;
 
     public long getId() {

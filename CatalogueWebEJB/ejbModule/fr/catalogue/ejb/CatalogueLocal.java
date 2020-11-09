@@ -1,9 +1,9 @@
 package fr.catalogue.ejb;
-import fr.catalogue.beans.CategorieBean;
+import fr.catalogue.beans.Categorie;
 
 import javax.ejb.Local;
 
 @Local
 public interface CatalogueLocal {
-    CategorieBean getCategory(String name);
+    Categorie getCategory(String name);
 }
