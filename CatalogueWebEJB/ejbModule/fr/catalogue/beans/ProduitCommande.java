@@ -11,17 +11,36 @@ public class ProduitCommande implements Serializable {
     private static final long serialVersionUID = 4802556426613669717L;
 
     @Id
-    private int commande_client_id;
+    @OneToOne
+    private Client client;
+
+    @OneToOne
+    private Produit produit;
 
     @Column(nullable = false)
     private int quantite;
 
-
-    public int getCommande_client_id() {
-        return commande_client_id;
+    public Client getClient() {
+        return client;
     }
 
-    public void setCommande_client_id(int commande_client_id) {
-        this.commande_client_id = commande_client_id;
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public Produit getProduits() {
+        return produit;
+    }
+
+    public void setProduits(Produit produits) {
+        this.produit = produits;
+    }
+
+    public int getQuantite() {
+        return quantite;
+    }
+
+    public void setQuantite(int quantite) {
+        this.quantite = quantite;
     }
 }
