@@ -1,4 +1,4 @@
-package fr.cataloge.servlets;
+package fr.catalogue.servlets;
 
 
 import javax.servlet.ServletException;

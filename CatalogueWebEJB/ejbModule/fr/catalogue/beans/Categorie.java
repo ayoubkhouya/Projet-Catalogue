@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(schema = "catalogue", name = "categories")
+@Table(schema = "catalogue")
 public class Categorie implements Serializable {
 
     private static final long serialVersionUID = 7215289928717677967L;
@@ -16,6 +16,9 @@ public class Categorie implements Serializable {
 
     @Column(nullable = false)
     private String nom;
+
+    @Column
+    private String descrition;
 
     public long getId() {
         return id;
@@ -31,5 +34,13 @@ public class Categorie implements Serializable {
 
     public void setName(String nom) {
         this.nom = nom;
+    }
+
+    public String getDescrition() {
+        return descrition;
+    }
+
+    public void setDescrition(String descrition) {
+        this.descrition = descrition;
     }
 }

@@ -1,4 +1,4 @@
-package fr.cataloge.enums;
+package fr.catalogue.enums;
 
 public enum CatalogueURI {
 

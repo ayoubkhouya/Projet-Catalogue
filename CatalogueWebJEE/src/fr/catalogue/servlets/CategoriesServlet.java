@@ -1,4 +1,4 @@
-package fr.cataloge.servlets;
+package fr.catalogue.servlets;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -10,10 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import fr.catalogue.beans.Categorie;
-import fr.catalogue.ejb.interfaces.remote.CatalogueRemote;
+import fr.catalogue.global.AppContext;
+import fr.catalogue.ejb.interfaces.remote.CategorieRemote;
 
 import java.io.IOException;
 import java.util.Hashtable;
+import java.util.List;
 
 @WebServlet("/categorie")
 public class CategoriesServlet extends HttpServlet {
@@ -26,13 +28,10 @@ public class CategoriesServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       //request.getRequestDispatcher("/pages/categorie.jsp").forward(request, response);
-
-
-        // TODO Auto-generated method stub
+	    
         HttpSession session = request.getSession(true);
-        String type = request.getParameter("type");
-        Categorie categorieBean = null;
+        List<Categorie> categories = null;
+        Categorie categorie = null;
 
         // Connexion JNDI (annuaire pour localiser l'EJB)
         try {
@@ -40,20 +39,19 @@ public class CategoriesServlet extends HttpServlet {
             jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
 
             final Context context = new InitialContext(jndiProperties);
-            final String appName = "CatalogueEAR";
-            final String moduleName = "CatalogueWebEJB";
-            final String beanName = "CatalogueJNDI";
-            final String viewClassName = CatalogueRemote.class.getName();
-            CatalogueRemote remote =
-                    (CatalogueRemote) context.lookup("ejb:"+appName+"/"+moduleName+"/"+beanName+"!"+viewClassName);
-            categorieBean = remote.getCategory("dvd");
+            final String viewClassName = CategorieRemote.class.getName();
+
+            CategorieRemote remote =
+                    (CategorieRemote) context.lookup("ejb:"+ AppContext.appName +"/"+ AppContext.moduleName +"/"+ AppContext.beanName +"!" + viewClassName);
+
+            categories = remote.getAllCategories();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        session.setAttribute("categorie", categorieBean.getName());
+        session.setAttribute("categories", categories);
         response.sendRedirect("/pages/categorie.jsp");
-
     }
 
     @Override

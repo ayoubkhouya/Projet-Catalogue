@@ -6,7 +6,7 @@ import java.sql.Timestamp;
 import java.util.Collection;
 
 @Entity
-@Table(schema = "catalogue", name = "produits")
+@Table(schema = "catalogue")
 public class Produit implements Serializable {
 
     private static final long serialVersionUID = 6784550648794430181L;
