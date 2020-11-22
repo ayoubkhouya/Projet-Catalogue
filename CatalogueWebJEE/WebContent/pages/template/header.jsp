@@ -53,9 +53,10 @@
                     </a>
                 </li>
             </ul>
-            <span class="navbar-text">
-                <%@include file="aside.jsp"%>
-    </span>
+            <div class="form-inline my-2 my-lg-0">
+                <a title="se connecter" class="mr-sm-4" href="#">Sign in <i class="fas fa-sign-in-alt"></i></a>
+                <a title="créer compte" class="text-info my-2 my-sm-0" href="#">Sign up <i class="fas fa-user-plus"></i></a>
+            </div>
         </div>
 
     </nav>
