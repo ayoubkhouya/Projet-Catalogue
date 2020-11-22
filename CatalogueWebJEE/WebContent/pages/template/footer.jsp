@@ -10,7 +10,6 @@
         ©KHOUYA Ayoub | HRAMCHI Hamza
     </div>
 </footer>
-
-<script src="./assets/js/bootstrap.js"></script>
+<script src="../assets/js/bootstrap.js"></script>
 </body>
 </html>

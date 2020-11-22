@@ -2,7 +2,9 @@
   Created by IntelliJ IDEA | Eclipse IDE.
   User: Ayoub KHOUYA | Hamza HRAMCHI
 --%>
-<%@include file="template/header.jsp"%>
+
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@include file="template/header.jsp" %>
 
 <div class="container">
     <h3 class="font-weight-light">
@@ -69,4 +71,4 @@
     </div>
 </div>
 
-<%@include file="template/footer.jsp"%>
+<%@include file="template/footer.jsp" %>

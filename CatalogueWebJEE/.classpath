@@ -16,5 +16,7 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Java EE 6-Java EE 6"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/CatalogueEJB"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jquery"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/a076d05399"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
