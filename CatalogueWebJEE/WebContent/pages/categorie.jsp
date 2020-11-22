@@ -6,6 +6,7 @@
 
 <div class="container">
     <div class="row row-cols-1 row-cols-md-3">
+
         <div class="col mb-4">
             <div class="card">
                 <img  src="../assets/images/cd.png " class="card-img-top img-category" alt="...">

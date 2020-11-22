@@ -2,12 +2,9 @@
   Created by IntelliJ IDEA | Eclipse IDE.
   User: Ayoub KHOUYA | Hamza HRAMCHI
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<link rel="icon" href="./assets/images/logo.png" />
-<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+<%@ page contentType="text/html;charset=UTF-8" %>
 
-
-<%@include file="pages/template/header.jsp"%>
+<%@include file="pages/template/header.jsp" %>
 
 <div class="container">
     <h3 class="text-center">
@@ -16,4 +13,4 @@
 </div>
 
 
-<%@include file="pages/template/footer.jsp"%>
+<%@include file="pages/template/footer.jsp" %>

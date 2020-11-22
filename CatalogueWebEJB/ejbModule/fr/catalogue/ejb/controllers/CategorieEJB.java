@@ -1,7 +1,9 @@
-package fr.catalogue.ejb;
+package fr.catalogue.ejb.controllers;
 
 
 import fr.catalogue.beans.Categorie;
+import fr.catalogue.ejb.interfaces.local.CatalogueLocal;
+import fr.catalogue.ejb.interfaces.remote.CatalogueRemote;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;

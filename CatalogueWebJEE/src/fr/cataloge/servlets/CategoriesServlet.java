@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import fr.catalogue.beans.Categorie;
-import fr.catalogue.ejb.CatalogueRemote;
+import fr.catalogue.ejb.interfaces.remote.CatalogueRemote;
 
 import java.io.IOException;
 import java.util.Hashtable;
