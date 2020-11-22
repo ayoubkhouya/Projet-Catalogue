@@ -5,5 +5,4 @@ import javax.ejb.Local;
 
 @Local
 public interface CatalogueLocal {
-    Categorie getCategory(String name);
 }
