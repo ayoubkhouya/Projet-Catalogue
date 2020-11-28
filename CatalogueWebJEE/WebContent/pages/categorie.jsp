@@ -21,7 +21,7 @@
             if (categories != null) {
                 for (Categorie cat : categories) {
                 %>
-                     <a href="${pageContext.request.contextPath}/categories?id=" <%= "\"" + cat.getId() + "\"" %> >
+                     <a href=${pageContext.request.contextPath}<%= "/categories?id=" + cat.getId() %> >
                          <div class="col mb-4">
                              <div class="card">
                                  <img  src="../assets/images/<%= cat.getName()%>.png"  class="card-img-top img-category" alt="...">
