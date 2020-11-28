@@ -1,9 +1,6 @@
 <%--
-  Created by IntelliJ IDEA.
-  User: Hamza HRAMCHI
-  Date: 28/11/2020
-  Time: 23:20
-  To change this template use File | Settings | File Templates.
+  Created by IntelliJ IDEA | Eclipse IDE.
+  User: Ayoub KHOUYA | Hamza HRAMCHI
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -17,6 +14,11 @@
                 <b>Les produits</b>
             </h3>
         </div>
+        <div hidden class="row">
+            <div class="alert alert-success">
+                <strong>Produit ajouté au panier avec succès!</strong>
+            </div>
+        </div>
         <div class="row row-cols-1 row-cols-md-3">
             <div class="row mt-5">
                 <div class="col-md-6">
@@ -28,7 +30,7 @@
                             <p class="card-text">
                                 Description du produit
                             </p>
-                            <a href="#" class="btn btn-success">
+                            <a onclick="addToBasket(id)" class="btn btn-success">
                                 <i class='fas fa-shopping-cart'></i>
                                 Ajouter au panier
                             </a>
