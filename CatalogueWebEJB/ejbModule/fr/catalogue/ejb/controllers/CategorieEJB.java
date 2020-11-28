@@ -18,17 +18,23 @@ public class CategorieEJB implements CategorieLocal, CategorieRemote {
     EntityManager mh;
 
     @Override
-    public Categorie getOneCategory(String name) {
-        Query query = mh.createQuery("SELECT c FROM Categorie c WHERE c.nom=:name").setParameter("name", name);
-        return (Categorie) query.getSingleResult();
-    }
-
-    @Override
     public List<Categorie> getAllCategories() {
         Query query = mh.createQuery("SELECT c FROM Categorie c");
         List<Categorie> categories = query.getResultList();
         System.out.println(categories);
         return categories;
+    }
+
+    @Override
+    public Categorie getCategoryById(int id) {
+        Query query = mh.createQuery("SELECT c FROM Categorie c WHERE c.id=:id").setParameter("id", id);
+        return (Categorie) query.getSingleResult();
+    }
+
+    @Override
+    public Categorie getCategoryByName(String name) {
+        Query query = mh.createQuery("SELECT c FROM Categorie c WHERE c.nom=:name").setParameter("name", name);
+        return (Categorie) query.getSingleResult();
     }
 
 

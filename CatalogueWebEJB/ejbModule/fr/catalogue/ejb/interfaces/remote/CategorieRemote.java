@@ -8,6 +8,7 @@ import java.util.List;
 
 @Remote
 public interface CategorieRemote {
-    Categorie getOneCategory(String name);
     List<Categorie> getAllCategories();
+    Categorie getCategoryById(int id);
+    Categorie getCategoryByName(String name);
 }
