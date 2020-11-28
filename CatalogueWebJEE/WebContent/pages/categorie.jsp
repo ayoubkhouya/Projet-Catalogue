@@ -16,7 +16,7 @@
                 %>
                     <div class="col mb-4">
                         <div class="card">
-                            <img  src="../assets/images/<%= cat.getName()%>.png" width="30" height="30" class="card-img-top img-category" alt="...">
+                            <img  src="../assets/images/<%= cat.getName()%>.png"  class="card-img-top img-category" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"> <%=cat.getName() %> </h5>
                                 <p class="card-text"> <%=cat.getDescrition() %> </p>
