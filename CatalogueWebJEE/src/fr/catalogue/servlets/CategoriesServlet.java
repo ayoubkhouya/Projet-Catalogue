@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.Hashtable;
 import java.util.List;
 
-@WebServlet("/categorie")
+@WebServlet("/categories")
 public class CategoriesServlet extends HttpServlet {
 
 	private static final long serialVersionUID = -8349070857739843763L;
@@ -51,7 +51,7 @@ public class CategoriesServlet extends HttpServlet {
         }
 
         session.setAttribute("categories", categories);
-        response.sendRedirect("/pages/categorie.jsp");
+        request.getRequestDispatcher("/pages/categorie.jsp").forward(request, response);
     }
 
     @Override
