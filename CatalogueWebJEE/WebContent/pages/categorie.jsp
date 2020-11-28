@@ -7,6 +7,13 @@
 <%@include file="template/header.jsp"%>
 
 <div class="container">
+    <div class="row">
+        <h3 class="font-weight-light">
+            <a href="#" title="Page d'accueil">Catalogue web</a> |
+            <i class='fas fa-th-list' style="color: #1717c8"></i>
+            <b>Les catalogue</b>
+        </h3>
+    </div>
     <div class="row row-cols-1 row-cols-md-3">
 
         <%
@@ -14,18 +21,24 @@
             if (categories != null) {
                 for (Categorie cat : categories) {
                 %>
-                    <div class="col mb-4">
-                        <div class="card">
-                            <img  src="../assets/images/<%= cat.getName()%>.png"  class="card-img-top img-category" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title"> <%=cat.getName() %> </h5>
-                                <p class="card-text"> <%=cat.getDescrition() %> </p>
-                            </div>
-                        </div>
-                    </div>
+                     <a href="#">
+                         <div class="col mb-4">
+                             <div class="card">
+                                 <img  src="../assets/images/<%= cat.getName()%>.png"  class="card-img-top img-category" alt="...">
+                                 <div class="card-body">
+                                     <h5 class="card-title"> <%=cat.getName() %> </h5>
+                                     <p class="card-text"> <%=cat.getDescrition() %> </p>
+                                 </div>
+                             </div>
+                         </div>
+                     </a>
+
                 <%
                 }
-            }
+            } else {
+                    // TODO : when the categories empty
+                    }
+
         %>
 
     </div>

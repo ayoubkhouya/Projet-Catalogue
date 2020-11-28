@@ -28,17 +28,8 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="../index.jsp">Accueil <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/categorie" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Catégories
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Livres</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">DVDs</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">CDs de musique</a>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="/categories">Catégories</a>
                 </li>
                 <li class="nav-item text-bold ml-12">
                     <a class="nav-link" href="../pages/panier.jsp">
