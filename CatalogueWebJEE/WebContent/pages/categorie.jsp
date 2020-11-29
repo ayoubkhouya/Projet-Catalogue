@@ -11,7 +11,8 @@
         <h3 class="font-weight-light">
             <a href="#" title="Page d'accueil">Catalogue web</a> |
             <i class='fas fa-th-list' style="color: #1717c8"></i>
-            <b>Les catalogue</b>
+            <b>Les catégories
+            </b>
         </h3>
     </div>
     <div class="row row-cols-1 row-cols-md-3">

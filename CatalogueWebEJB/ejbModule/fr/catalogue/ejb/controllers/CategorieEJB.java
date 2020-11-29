@@ -14,6 +14,7 @@ import java.util.List;
 @Stateless(name = "CatalogueJNDI")
 public class CategorieEJB implements CategorieLocal, CategorieRemote {
 
+
     @PersistenceContext(unitName = "catalogueManager")
     EntityManager mh;
 
@@ -21,7 +22,6 @@ public class CategorieEJB implements CategorieLocal, CategorieRemote {
     public List<Categorie> getAllCategories() {
         Query query = mh.createQuery("SELECT c FROM Categorie c");
         List<Categorie> categories = query.getResultList();
-        System.out.println(categories);
         return categories;
     }
 

@@ -42,8 +42,8 @@ public class CategoriesServlet extends HttpServlet implements CategorieMethodes 
         }
         if (mapParams.containsKey("id")) {
             Categorie categorie = getCategorieById(Integer.parseInt(mapParams.get("id")[0]));
-            session.setAttribute("categorie", categorie);
-            request.getRequestDispatcher("/pages/categorie.jsp").forward(request, response);
+            request.setAttribute("categorie", categorie);
+            request.getRequestDispatcher("/produits?cat=" + categorie.getId()).forward(request, response);
         }
         if (mapParams.containsKey("name")) {
             Categorie categorie = getCategorieByName(mapParams.get("name")[0]);
