@@ -15,8 +15,6 @@
                 <b>Les produits</b>
             </h2>
         </div>
-        <div class="row row-cols-1 row-cols-md-3">
-
             <%
                 List<Produit> produits = (List<Produit>) session.getAttribute("produits");
                 if (produits.isEmpty()) {
@@ -27,13 +25,13 @@
                 </div>
 
                 <% } else {
-                    int i = 0;
-                    for (Produit produit : produits) {
-                    %>
+                    int i = 0;%>
+            <div class="row row-cols-1 row-cols-md-3">
+                   <% for (Produit produit : produits) {  %>
                         <div class="ml-2">
                             <h4 class="text-bold">Produit N°: <%= i +=1 %></h4>
                             <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" height="30%" width="30%" src="../assets/images/cd.png">
+                                <img class="card-img-top"  src="../assets/images/cd.png">
                                 <div class="card-body">
                                     <h5 class="card-title"><%= produit.getNom() %></h5>
                                     <p class="card-text">
@@ -57,11 +55,9 @@
                         </div>
                     <%
                     }
-                }
-            %>
-
-        </div>
-
+                     }
+                    %>
+            </div>
     </div>
 
 <script src="../assets/js/scripts.js"></script>

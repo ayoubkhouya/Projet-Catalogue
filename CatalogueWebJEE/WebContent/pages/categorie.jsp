@@ -22,8 +22,8 @@
             if (categories != null) {
                 for (Categorie cat : categories) {
                 %>
-                     <a style="color: white; height: max-content; width: max-content" href=${pageContext.request.contextPath}<%= "/categories?id=" + cat.getId() %> >
-                         <div class="ml-lg-5 card bg-info">
+                     <a style="color: white" href=${pageContext.request.contextPath}<%= "/categories?id=" + cat.getId() %> >
+                         <div class="ml-lg-12 mb-lg-5 card bg-info">
                              <div class="card-body text-center">
                                  <strong><h4 class="card-title"> <%=cat.getName() %> </h4></strong>
                                  <p class="card-text"> <%=cat.getDescrition() %> </p>

@@ -12,7 +12,7 @@
         <i class='fas fa-user-plus' style="color: #1717c8"></i>
         <b>Créer compte</b>
     </h3>
-    <form action="" class="was-validated">
+    <form action="/client" method="POST" class="was-validated">
         <div class="form-group">
             <label for="name"><b>Nom</b></label>
             <input type="text" class="form-control" id="name" placeholder="Votre nom" name="name" required>
