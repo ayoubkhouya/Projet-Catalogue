@@ -41,7 +41,13 @@
                                     </p>
                                     <p class="card-subtitle" style="color: red">
                                         <%= produit.getPrix() %> €
-                                    </p>
+                                        <br><span>
+                                            <a href=${pageContext.request.contextPath}<%= "/produits?id=" + produit.getId() %> >
+                                                <i class='fas fa-info-circle'></i>
+                                                Plus de détails
+                                            </a>
+                                        </span>
+                                    </p><hr>
                                     <a onclick="addToBasket(<%= produit.getId() %>)"  class="btn btn-success">
                                         <i class='fas fa-shopping-cart'></i>
                                         Ajouter au panier

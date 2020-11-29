@@ -7,19 +7,23 @@
 <%@include file="pages/template/header.jsp" %>
 
 <div class="container">
-    <h3 class="text-center">
-        Accueil <br> <b style="color: #446d0b">Bienvenue dans ma boutique : CATALOGUE WEB </b>
-    </h3>
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="row mb-2">
+        <h2 class="font-weight-light">
+            <a href="../index.jsp" title="Page d'accueil">Catalogue web</a> |
+            <i class='fas fa-home' style="color: #1717c8"></i>
+            Bienvenue dans ma boutique <b>Catalogue Web</b>
+        </h2>
+    </div>
+    <div  style="position: center; width: 100%; height: 100%" id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class=".flex-lg-row carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-90" src="assets/images/1.png" alt="First slide">
+                <img class="d-block w-90" src="assets/images/1.png">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-90" src="assets/images/2.png" alt="Second slide">
+                <img class="d-block w-90" src="assets/images/2.png">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-90" src="assets/images/3.png" alt="Third slide">
+                <img class="d-block w-90" src="assets/images/3.png">
             </div>
         </div>
     </div>
