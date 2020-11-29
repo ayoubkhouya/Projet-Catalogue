@@ -8,10 +8,10 @@
 
 <div class="container">
     <h3 class="text-center">
-        Accueil <br> <b style="color: darkblue">Bienvenue dans ma boutique : Catalogue web </b>
+        Accueil <br> <b style="color: #446d0b">Bienvenue dans ma boutique : CATALOGUE WEB </b>
     </h3>
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
+        <div class=".flex-lg-row carousel-inner">
             <div class="carousel-item active">
                 <img class="d-block w-90" src="assets/images/1.png" alt="First slide">
             </div>

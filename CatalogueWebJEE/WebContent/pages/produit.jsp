@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <h3 class="font-weight-light">
-            <a href="#" title="Page d'accueil">Catalogue web</a> |
+            <a href="../index.jsp" title="Page d'accueil">Catalogue web</a> |
             <i class='fas fa-compact-disc' style="color: #1717c8"></i>
             <b>Le produit</b>
         </h3>

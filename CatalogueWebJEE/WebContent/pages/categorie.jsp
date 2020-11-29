@@ -8,29 +8,25 @@
 <%@include file="template/header.jsp"%>
 
 <div class="container">
-    <div class="row">
+    <div class="row mb-lg-5">
         <h3 class="font-weight-light">
-            <a href="#" title="Page d'accueil">Catalogue web</a> |
+            <a href="../index.jsp" title="Page d'accueil">Catalogue web</a> |
             <i class='fas fa-th-list' style="color: #1717c8"></i>
             <b>Les catégories
             </b>
         </h3>
     </div>
-    <div class="row row-cols-1 row-cols-md-3">
-
+    <div class="row card-columns mt-xl-5">
         <%
             List<Categorie> categories = (List<Categorie>) session.getAttribute("categories");
             if (categories != null) {
                 for (Categorie cat : categories) {
                 %>
-                     <a href=${pageContext.request.contextPath}<%= "/categories?id=" + cat.getId() %> >
-                         <div class="col mb-4">
-                             <div class="card">
-                                 <img  src="../assets/images/<%= cat.getName()%>.png"  class="card-img-top img-category" alt="...">
-                                 <div class="card-body">
-                                     <h5 class="card-title"> <%=cat.getName() %> </h5>
-                                     <p class="card-text"> <%=cat.getDescrition() %> </p>
-                                 </div>
+                     <a style="color: white" href=${pageContext.request.contextPath}<%= "/categories?id=" + cat.getId() %> >
+                         <div class="ml-lg-5 card bg-info">
+                             <div class="card-body text-center">
+                                 <strong><h4 class="card-title"> <%=cat.getName() %> </h4></strong>
+                                 <p class="card-text"> <%=cat.getDescrition() %> </p>
                              </div>
                          </div>
                      </a>
@@ -38,12 +34,14 @@
                 <%
                 }
             } else {
-                    // TODO : when the categories empty
-                    }
+                %>
+
+        <%
+            }
 
         %>
-
     </div>
+    <%@include file="template/footer.jsp"%>
 </div>
 
-<%@include file="template/footer.jsp"%>
+

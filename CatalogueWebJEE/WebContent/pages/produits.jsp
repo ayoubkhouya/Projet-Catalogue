@@ -8,38 +8,43 @@
 <%@include file="template/header.jsp" %>
 
     <div class="container mb-3">
-        <div class="row">
-            <h3 class="font-weight-light">
-                <a href="#" title="Page d'accueil">Catalogue web</a> |
+        <div class="row mb-2">
+            <h2 class="font-weight-light">
+                <a href="../index.jsp" title="Page d'accueil">Catalogue web</a> |
                 <i class='fas fa-compact-disc' style="color: #1717c8"></i>
                 <b>Les produits</b>
-            </h3>
+            </h2>
         </div>
         <div class="row row-cols-1 row-cols-md-3">
 
             <%
                 List<Produit> produits = (List<Produit>) session.getAttribute("produits");
                 if (produits.isEmpty()) {
-                    System.out.println("VIIIIIIIIDE");
-                } else {
+
+            %>
+                <div class="row alert alert-danger" role="alert">
+                    Aucuns produits pour cette catégorie !
+                </div>
+
+                <% } else {
                     int i = 0;
                     for (Produit produit : produits) {
                     %>
-                        <div>
-                            <h2 class="text-bold">Produit N°: <%= i +=1 %></h2>
+                        <div class="ml-2">
+                            <h4 class="text-bold">Produit N°: <%= i +=1 %></h4>
                             <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="../assets/images/cd.png" alt="Card image cap">
+                                <img class="card-img-top" height="30%" width="30%" src="../assets/images/cd.png">
                                 <div class="card-body">
                                     <h5 class="card-title"><%= produit.getNom() %></h5>
                                     <p class="card-text">
                                         <%= produit.getDescription() %>
                                     </p>
                                     <p class="card-subtitle" style="color: red">
-                                        <%= produit.getPrix() %>
+                                        <%= produit.getPrix() %> €
                                     </p>
-                                    <a href="#" class="btn btn-success">
+                                    <a onclick="addToBasket(<%= produit.getId() %>)"  class="btn btn-success">
                                         <i class='fas fa-shopping-cart'></i>
-                                        Ajouter un panier
+                                        Ajouter au panier
                                     </a>
                                 </div>
                             </div>
@@ -53,6 +58,7 @@
 
     </div>
 
+<script src="../assets/js/scripts.js"></script>
 <%@include file="template/footer.jsp" %>
 
 
