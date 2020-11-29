@@ -26,11 +26,11 @@
 
                 <% } else {
                     int i = 0;%>
-            <div class="row row-cols-1 row-cols-md-3">
+            <div class="row row-cols-1 row-cols-md-4">
                    <% for (Produit produit : produits) {  %>
-                        <div class="ml-2">
+                        <div class="ml-md-5 mb-md-5 produit border border-secondary rounded">
                             <h4 class="text-bold">Produit N°: <%= i +=1 %></h4>
-                            <div class="card" style="width: 18rem;">
+                            <div class="card" >
                                 <img class="card-img-top"  src="../assets/images/cd.png">
                                 <div class="card-body">
                                     <h5 class="card-title"><%= produit.getNom() %></h5>

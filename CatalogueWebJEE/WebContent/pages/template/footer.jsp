@@ -4,12 +4,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!-- Footer -->
-<footer class="footer fixed-bottom bg-secondary">
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-5" style="max-height: 50%">
+<div class="footer fixed-bottom bg-secondary">
         ©KHOUYA Ayoub | HRAMCHI Hamza
-    </div>
-</footer>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="../assets/js/bootstrap.js"></script>
