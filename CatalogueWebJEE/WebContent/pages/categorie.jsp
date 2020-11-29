@@ -4,6 +4,7 @@
 --%>
 <%@ page import="fr.catalogue.beans.Categorie" %>
 <%@ page import="java.util.List" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@include file="template/header.jsp"%>
 
 <div class="container">
