@@ -9,4 +9,5 @@ import java.util.List;
 public interface ClientRemote {
     List<Client> getClients();
     Client getClient(int id);
+    boolean enregisterClient(Client client);
 }

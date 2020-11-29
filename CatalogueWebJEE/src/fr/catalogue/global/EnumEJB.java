@@ -4,7 +4,8 @@ public enum EnumEJB {
 
     PRODUITEJB("ProduitEJB"),
     CATEGORIEEJB(""),
-    COMMANDEEJB("");
+    COMMANDEEJB(""),
+    CLIENTEJB("ClientEJB");
 
     private final String ejbName;
 

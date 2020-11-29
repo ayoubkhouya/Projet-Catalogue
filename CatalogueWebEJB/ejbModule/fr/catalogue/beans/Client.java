@@ -10,6 +10,17 @@ public class Client implements Serializable {
 
     private static final long serialVersionUID = 570269912778275353L;
 
+    public Client() {
+        super();
+    }
+
+    public Client(String nom, String email, String adresse, String telephone) {
+        this.nom = nom;
+        this.email = email;
+        this.telephone = telephone;
+        this.adresse = adresse;
+    }
+
     @Id
     @GeneratedValue
     @Column(nullable = false)

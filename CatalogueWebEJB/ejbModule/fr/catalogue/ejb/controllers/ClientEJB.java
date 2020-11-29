@@ -29,4 +29,14 @@ public class ClientEJB implements ClientLocal, ClientRemote {
         Client client = (Client) query.getSingleResult();
         return client;
     }
+
+    @Override
+    public boolean enregisterClient(Client client) {
+        try {
+            mh.persist(client);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }
