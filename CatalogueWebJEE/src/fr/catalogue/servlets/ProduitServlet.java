@@ -38,7 +38,10 @@ public class ProduitServlet extends HttpServlet implements ProduitMethodes {
         if (mapParams.isEmpty()) {
 
         } if (mapParams.containsKey("id")) {
-
+            int id = Integer.parseInt(request.getParameter("id"));
+            Produit produit = getProduitById(id);
+            request.setAttribute("produit", produit);
+            request.getRequestDispatcher("/pages/produit.jsp").forward(request, response);
         } if (mapParams.containsKey("cat")) {
             List<Produit> produits = getProduitsByCategorieId(Integer.parseInt(request.getParameter("cat")));
             session.setAttribute("produits", produits);
@@ -70,7 +73,8 @@ public class ProduitServlet extends HttpServlet implements ProduitMethodes {
 
     @Override
     public Produit getProduitById(int id) {
-        return null;
+        produitRemote = (ProduitRemote) AppContext.getRemote(ProduitRemote.class, EnumEJB.PRODUITEJB.getEjbName());
+        return produitRemote.getProduitById(id);
     }
 
     @Override

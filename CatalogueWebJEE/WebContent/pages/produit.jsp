@@ -1,4 +1,4 @@
-<%--
+<%@ page import="fr.catalogue.beans.Produit" %><%--
   Created by IntelliJ IDEA | Eclipse IDE.
   User: Ayoub KHOUYA | Hamza HRAMCHI
 --%>
@@ -14,34 +14,49 @@
         </h3>
     </div>
     <div class="row mt-5">
-        <div class="col-md-6">
-            <h2 class="text-bold">Produit N° 12</h2>
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="../assets/images/cd.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">CD-14 Rock</h5>
-                    <p class="card-text">
-                        Description du produit
-                    </p>
-                    <a href="#" class="btn btn-success">
-                        <i class='fas fa-shopping-cart'></i>
-                        Ajouter un panier
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="card" style="width: 18rem;">
-                <div class="card-header text-info">
-                    Informations complémentaires
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Capacité: </li>
-                    <li class="list-group-item">Type: </li>
-                    <li class="list-group-item">Auteur: </li>
-                </ul>
-            </div>
-        </div>
+
+        <%
+            Produit produit = (Produit) request.getAttribute("produit");
+            if ( produit != null) {
+                %>
+
+                    <div class="col-md-6">
+                        <h2 class="text-bold">Produit : <%= produit.getId() %> </h2>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="../assets/images/cd.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= produit.getNom() %></h5>
+                                <p class="card-text">
+                                    <%= produit.getDescription() %>
+                                </p>
+                                <a href="#" class="btn btn-success">
+                                    <i class='fas fa-shopping-cart'></i>
+                                    Ajouter un panier
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-header text-info">
+                                Informations complémentaires
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Capacité: </li>
+                                <li class="list-group-item">Type: <%= produit.getCategorie().getName() %> </li>
+                                <li class="list-group-item">Auteur: </li>
+                                <li class="list-group-item">Prix: <%= produit.getPrix() %> €</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                <%
+            } else {
+
+            }
+        %>
+
     </div>
 
 </div>
