@@ -31,10 +31,10 @@ public class ClientServlet extends HttpServlet implements ClientMethodes {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String nom = (String) req.getAttribute("name");
-        String email = (String) req.getAttribute("email");
-        String adresse = (String) req.getAttribute("adress");
-        String telephone = (String) req.getAttribute("phone");
+        String nom = (String) req.getParameter("name");
+        String email = (String) req.getParameter("email");
+        String adresse = (String) req.getParameter("adress");
+        String telephone = (String) req.getParameter("phone");
         if (registerClient(new Client(nom, email, adresse, telephone))) {
             resp.sendRedirect("/home");
         } else {
