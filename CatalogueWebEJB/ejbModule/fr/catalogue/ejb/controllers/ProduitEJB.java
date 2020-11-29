@@ -44,4 +44,12 @@ public class ProduitEJB implements ProduitRemote, ProduitLocal {
         Produit produit = (Produit) query.getSingleResult();
         return produit;
     }
+
+    @Override
+    public List<Produit> getProduitsByCategorieId(int id) {
+        Query query = mh.createQuery("SELECT p FROM Produit p WHERE p.categorie.id=:id").setParameter("id", id);
+        List<Produit> produits = query.getResultList();
+        System.out.println(query.getFirstResult());
+        return produits;
+    }
 }

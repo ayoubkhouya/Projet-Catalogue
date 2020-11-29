@@ -4,6 +4,7 @@ import fr.catalogue.beans.Categorie;
 import fr.catalogue.beans.Produit;
 import fr.catalogue.ejb.interfaces.remote.ProduitRemote;
 import fr.catalogue.global.AppContext;
+import fr.catalogue.global.EnumEJB;
 import fr.catalogue.interfaces.ProduitMethodes;
 
 import javax.servlet.ServletException;
@@ -39,7 +40,7 @@ public class ProduitServlet extends HttpServlet implements ProduitMethodes {
         } if (mapParams.containsKey("id")) {
 
         } if (mapParams.containsKey("cat")) {
-            List<Produit> produits = getProduitsByCategorie((Categorie) request.getAttribute("categorie"));
+            List<Produit> produits = getProduitsByCategorieId(Integer.parseInt(request.getParameter("cat")));
             session.setAttribute("produits", produits);
             request.getRequestDispatcher("/pages/produits.jsp").forward(request, response);
         }
@@ -57,8 +58,14 @@ public class ProduitServlet extends HttpServlet implements ProduitMethodes {
 
     @Override
     public List<Produit> getProduitsByCategorie(Categorie categorie) {
-        produitRemote = (ProduitRemote) AppContext.getRemote(ProduitRemote.class);
+        produitRemote = (ProduitRemote) AppContext.getRemote(ProduitRemote.class, EnumEJB.PRODUITEJB.getEjbName());
         return produitRemote.getProduitsByCategorie(categorie);
+    }
+
+    @Override
+    public List<Produit> getProduitsByCategorieId(int id) {
+        produitRemote = (ProduitRemote) AppContext.getRemote(ProduitRemote.class, EnumEJB.PRODUITEJB.getEjbName());
+        return produitRemote.getProduitsByCategorieId(id);
     }
 
     @Override

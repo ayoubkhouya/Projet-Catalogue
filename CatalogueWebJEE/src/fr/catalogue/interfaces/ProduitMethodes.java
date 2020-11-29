@@ -9,6 +9,7 @@ public interface ProduitMethodes {
 
     List<Produit> getProduits();
     List<Produit> getProduitsByCategorie(Categorie categorie);
+    List<Produit> getProduitsByCategorieId(int id);
     Produit getProduitById(int id);
     Produit getProduitByName(String name);
 

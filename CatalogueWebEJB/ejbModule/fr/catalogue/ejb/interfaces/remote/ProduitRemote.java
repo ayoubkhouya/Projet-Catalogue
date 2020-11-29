@@ -10,6 +10,7 @@ import java.util.List;
 public interface ProduitRemote {
     List<Produit> getProduits();
     List<Produit> getProduitsByCategorie(Categorie categorie);
+    List<Produit> getProduitsByCategorieId(int cat);
     Produit getProduitById(int id);
     Produit getProduitByName(String name);
 }

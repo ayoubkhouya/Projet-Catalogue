@@ -5,8 +5,6 @@ import fr.catalogue.ejb.interfaces.remote.CategorieRemote;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
-import javax.naming.Name;
-import java.rmi.Naming;
 import java.util.Hashtable;
 
 public class AppContext {
@@ -34,7 +32,7 @@ public class AppContext {
         return remote;
     }
 
-    public static Object getRemote(Class<?> cls) {
+    public static Object getRemote(Class<?> cls, String module) {
         Object remote = null;
         // Connexion JNDI (annuaire pour localiser l'EJB)
         try {
@@ -44,7 +42,7 @@ public class AppContext {
             final Context context = new InitialContext(jndiProperties);
             final String viewClassName = cls.getName();
 
-            remote = context.lookup("ejb:"+ AppContext.appName +"/"+ AppContext.moduleName +"/ProduitEJB!" + viewClassName);
+            remote = context.lookup("ejb:"+ AppContext.appName +"/"+ AppContext.moduleName +"/" + module + "!" + viewClassName);
 
         } catch (Exception e) {
             e.printStackTrace();
