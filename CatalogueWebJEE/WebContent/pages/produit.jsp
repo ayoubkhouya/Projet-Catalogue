@@ -5,6 +5,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="template/header.jsp"%>
 
+<script src="../assets/js/scripts.js"></script>
 <div class="container">
     <div class="row">
         <h3 class="font-weight-light">
@@ -61,5 +62,4 @@
 
 </div>
 
-<script src="../assets/js/scripts.js"></script>
 <%@include file="template/footer.jsp"%>

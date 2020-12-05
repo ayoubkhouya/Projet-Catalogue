@@ -5,13 +5,32 @@
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@include file="template/header.jsp" %>
+<%@include file="../assets/css/style.css"%>
 
+<script src="../assets/js/scripts.js"></script>
 <div class="container">
     <h3 class="mb-lg-5 font-weight-light">
         <a href="../index.jsp" title="Page d'accueil">Catalogue web</a> |
-        <i class='fas fa-user-plus' style="color: #1717c8"></i>
+        <i class='fas fa-user' style="color: #1717c8"></i>
         <b>Connexion</b>
     </h3>
+
+    <form action="" method="GET">
+        <div class="imgcontainer">
+            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+        </div>
+        <div class="form-group">
+            <label for="name"><b>Nom</b></label>
+            <input type="text" class="form-control" id="name" placeholder="Votre nom" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email"><b>Email</b></label>
+            <input type="email" class="form-control" id="email" placeholder="Votre Email" name="email" required>
+        </div>
+        <div class="form-group">
+            <button class="form-control btn btn-success" type="submit"> Connexion </button>
+        </div>
+    </form>
 </div>
-<script src="../assets/js/scripts.js"></script>
+
 <%@include file="template/footer.jsp" %>

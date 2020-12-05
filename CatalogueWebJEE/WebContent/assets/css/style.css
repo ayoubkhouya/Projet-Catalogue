@@ -50,3 +50,8 @@ body {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}

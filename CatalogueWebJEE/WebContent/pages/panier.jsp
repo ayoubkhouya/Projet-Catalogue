@@ -6,6 +6,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@include file="template/header.jsp" %>
 
+<script src="../assets/js/scripts.js"></script>
 <div class="container">
     <h3 class="font-weight-light">
         Catalogue web |
@@ -71,5 +72,4 @@
     </div>
 </div>
 
-<script src="../assets/js/scripts.js"></script>
 <%@include file="template/footer.jsp" %>

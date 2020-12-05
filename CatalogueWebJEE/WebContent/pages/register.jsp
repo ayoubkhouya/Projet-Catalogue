@@ -6,6 +6,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@include file="template/header.jsp" %>
 
+<script src="../assets/js/scripts.js"></script>
 <div class="container">
     <h3 class="mb-lg-5 font-weight-light">
         <a href="../index.jsp" title="Page d'accueil">Catalogue web</a> |
@@ -49,5 +50,4 @@
     </form>
 </div>
 
-<script src="../assets/js/scripts.js"></script>
 <%@include file="template/footer.jsp" %>

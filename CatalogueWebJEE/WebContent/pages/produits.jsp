@@ -4,9 +4,9 @@
   User: Ayoub KHOUYA | Hamza HRAMCHI
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-
 <%@include file="template/header.jsp" %>
 
+<script src="../assets/js/scripts.js"></script>
     <div class="container mb-3">
         <div class="row mb-2">
             <h2 class="font-weight-light">
@@ -60,7 +60,6 @@
             </div>
     </div>
 
-<script src="../assets/js/scripts.js"></script>
 <%@include file="template/footer.jsp" %>
 
 
