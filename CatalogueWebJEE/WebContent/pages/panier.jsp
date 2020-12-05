@@ -46,10 +46,12 @@
                     <td> <%= produit.getCategorie().getName().toUpperCase() %> </td>
                     <td> 1 </td>
                     <td><strong><%= produit.getPrix() %> €</strong></td>
-                    <td><a href="#"><i title="Supprimer" style="color: red" class="fas fa-trash-alt"></i></a></td>
+                    <td><a onclick="deleteProduct(<%= basket.getProduits().indexOf(produit) %>)"><i title="Supprimer" style="color: red" class="fas fa-trash-alt"></i></a></td>
                 </tr>
 
-            <% }  %>
+            <%
+                }
+            %>
 
             </tbody>
             <hr>

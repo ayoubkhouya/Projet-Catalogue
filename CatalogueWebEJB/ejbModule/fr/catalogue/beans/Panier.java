@@ -3,7 +3,6 @@ package fr.catalogue.beans;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 @Entity
@@ -21,7 +20,7 @@ public class Panier implements Serializable {
     private Client client;
 
     @OneToMany
-    private Collection<Produit> produits;
+    private List<Produit> produits;
 
     public Panier() {
         this.produits = new ArrayList<>();
@@ -43,11 +42,11 @@ public class Panier implements Serializable {
         this.client = client;
     }
 
-    public Collection<Produit> getProduits() {
+    public List<Produit> getProduits() {
         return produits;
     }
 
-    public void setProduits(Collection<Produit> produits) {
+    public void setProduits(List<Produit> produits) {
         this.produits = produits;
     }
 }

@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 
 @WebServlet("/panier")
@@ -42,6 +43,10 @@ public class PanierServlet extends HttpServlet implements PanierMethodes {
         Map<String, String[]> mapParams = req.getParameterMap();
         Panier panier = (Panier) session.getAttribute("panier");
 
+        if (mapParams.isEmpty()) {
+            doGet(req, resp);
+        }
+
         if (mapParams.containsKey("add")) {
             if (panier != null) {
 
@@ -58,9 +63,10 @@ public class PanierServlet extends HttpServlet implements PanierMethodes {
         } if (mapParams.containsKey("remove")) {
 
             if (panier != null) {
-                panier.getProduits().remove(getProduitFromPanier(Integer.parseInt(mapParams.get("remove")[0])));
-                System.out.println("Remove : " + Integer.parseInt(mapParams.get("remove")[0]));
+
+                panier.getProduits().remove(Integer.parseInt(mapParams.get("remove")[0]));
                 session.setAttribute("panier", panier);
+                resp.sendRedirect("/home");
             }
         }
 
