@@ -5,6 +5,7 @@ public enum EnumEJB {
     PRODUITEJB("ProduitEJB"),
     CATEGORIEEJB(""),
     COMMANDEEJB(""),
+    PANIER("PanierEJB"),
     CLIENTEJB("ClientEJB");
 
     private final String ejbName;
