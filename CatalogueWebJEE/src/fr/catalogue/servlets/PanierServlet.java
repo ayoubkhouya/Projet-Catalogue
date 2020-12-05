@@ -43,14 +43,17 @@ public class PanierServlet extends HttpServlet implements PanierMethodes {
 
         if (mapParams.containsKey("add")) {
             if (panier != null) {
+                System.out.println("Addddddd : " + Integer.parseInt(mapParams.get("add")[0]));
                 panier.getProduits().add(addProduitToPanier(Integer.parseInt(mapParams.get("add")[0])));
             } else {
                 panier = new Panier();
                 panier.getProduits().add(addProduitToPanier(Integer.parseInt(mapParams.get("add")[0])));
+                System.out.println("Addddddd : " + Integer.parseInt(mapParams.get("add")[0]));
             }
         } if (mapParams.containsKey("remove")) {
             if (panier != null) {
                 panier.getProduits().remove(getProduitFromPanier(Integer.parseInt(mapParams.get("remove")[0])));
+                System.out.println("Addddddd : " + Integer.parseInt(mapParams.get("remove")[0]));
             }
         }
 
