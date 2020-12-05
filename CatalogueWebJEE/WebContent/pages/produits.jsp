@@ -33,7 +33,7 @@
                             <div class="card" >
                                 <img class="card-img-top"  src="../assets/images/cd.png">
                                 <div class="card-body">
-                                    <h5 id="name" class="card-title"><%= produit.getNom() %></h5>
+                                    <h5 class="card-title"><%= produit.getNom() %></h5>
                                     <p class="card-text">
                                         <%= produit.getDescription() %>
                                     </p>

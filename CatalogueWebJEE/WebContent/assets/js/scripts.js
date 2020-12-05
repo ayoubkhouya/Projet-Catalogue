@@ -8,10 +8,13 @@ function addToBasket(id) {
             Swal.fire({
                 position: 'top',
                 icon: 'success',
-                title: '<br>' + name + '<br>' + '\n ajouté avec succès au panier',
+                title: 'Le produit est ajouté avec succès au panier',
                 showConfirmButton: false,
                 timer: 1500
             });
+            setTimeout(() => {
+                window.location.reload();
+            }, 1800)
         },
         error: function() {
             Swal.fire({
@@ -27,12 +30,30 @@ function addToBasket(id) {
 }
 
 function deleteProduct(id) {
-    $.ajax({
-        url: '/panier',
-        data: {remove: id},
-        method: 'POST',
-        success: function() {
-            alert("Product removed ! ");
+    Swal.fire({
+        title: 'Etes vous sùr ?',
+        text: "Vous voulez supprimer ce produit ?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Oui, supprimer!',
+        cancelButtonText: "Non, annuler"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: '/panier',
+                data: {remove: id},
+                method: 'POST'
+            });
+            Swal.fire(
+                'Supprimé!',
+                'Votre produit a été supprimé avec succès',
+                'success'
+            );
+            setTimeout(() => {
+                window.location.reload();
+            }, 1800)
         }
     })
 }
