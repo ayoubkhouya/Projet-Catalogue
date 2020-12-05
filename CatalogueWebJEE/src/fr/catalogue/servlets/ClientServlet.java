@@ -1,7 +1,6 @@
 package fr.catalogue.servlets;
 
 import fr.catalogue.beans.Client;
-import fr.catalogue.ejb.controllers.ClientEJB;
 import fr.catalogue.ejb.interfaces.remote.ClientRemote;
 import fr.catalogue.global.AppContext;
 import fr.catalogue.global.EnumEJB;
@@ -27,31 +26,57 @@ public class ClientServlet extends HttpServlet implements ClientMethodes {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Map<String, String[]> param = req.getParameterMap();
-        if (param.containsKey("signin")) {
-            req.getRequestDispatcher("/pages/register.jsp").forward(req, resp);
+
+        if (param.containsKey("login")) {
+            req.getRequestDispatcher("/pages/login.jsp").forward(req, resp);
         }
+
         if (param.containsKey("logout")) {
             req.getSession(true).setAttribute("client", null);
             resp.sendRedirect("/home");
+        }
+
+        if (param.containsKey("signin")) {
+            req.getRequestDispatcher("/pages/register.jsp").forward(req, resp);
         }
 
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String nom = (String) req.getParameter("name");
-        String email = (String) req.getParameter("email");
-        String adresse = (String) req.getParameter("adress");
-        String telephone = (String) req.getParameter("phone");
-        Client client = (registerClient(new Client(nom, email, adresse, telephone)));
-        if (client != null) {
-            resp.sendRedirect("/home");
-            // Session
-            HttpSession session = req.getSession(true);
-            session.setAttribute("client", client);
+        // Session
+        HttpSession session = req.getSession(true);
+        Map<String, String[]> param = req.getParameterMap();
+        String email;
+        String nom;
+        Client client;
+
+        if (param.containsKey("login")) {
+            nom = req.getParameter("name");
+            email = req.getParameter("email");
+            client = getClientByNameAndEmail(nom, email);
+            if (client != null) {
+                session.setAttribute("client", client);
+                resp.sendRedirect("/home");
+            } else {
+                resp.sendRedirect("/client?signin");
+            }
+            //req.getRequestDispatcher("/home").forward(req, resp);
         } else {
-            System.out.println("Error While Registering");
+            nom = req.getParameter("name");
+            email = req.getParameter("email");
+            String adresse = (String) req.getParameter("adress");
+            String telephone = (String) req.getParameter("phone");
+            client = (registerClient(new Client(nom, email, adresse, telephone)));
+            if (client != null) {
+                session.setAttribute("client", client);
+                resp.sendRedirect("/home");
+            } else {
+                System.out.println("Error While Registering");
+            }
         }
+
+
     }
 
     @Override
@@ -68,5 +93,11 @@ public class ClientServlet extends HttpServlet implements ClientMethodes {
     @Override
     public Client getClientById(int id) {
         return null;
+    }
+
+    @Override
+    public Client getClientByNameAndEmail(String nom, String email) {
+        clientRemote = (ClientRemote) AppContext.getRemote(ClientRemote.class, EnumEJB.CLIENTEJB.getEjbName());
+        return clientRemote.getClient(nom, email);
     }
 }

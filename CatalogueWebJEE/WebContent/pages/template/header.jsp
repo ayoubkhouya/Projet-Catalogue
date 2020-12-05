@@ -60,8 +60,13 @@
                 <%
                     if(session.getAttribute("client") == null) {
                 %>
+<<<<<<< HEAD
                     <a title="Se connecter" class="mr-sm-4" href="#">Connexion <i class="fas fa-sign-in-alt"></i></a>
                     <a title="Créer compte" class="text-info mr-sm-3" href="${pageContext.request.contextPath}/client?signin">Créer compte <i class="fas fa-user-plus"></i></a>
+=======
+                    <a title="se connecter" class="mr-sm-4" href="${pageContext.request.contextPath}/client?login">Connexion <i class="fas fa-sign-in-alt"></i></a>
+                    <a title="créer compte" class="text-info mr-sm-3" href="${pageContext.request.contextPath}/client?signin">Créer compte <i class="fas fa-user-plus"></i></a>
+>>>>>>> 092f72d... Add login an signin and fix some issues
                 <% }
                     else {
                     Client client = (Client) session.getAttribute("client");
