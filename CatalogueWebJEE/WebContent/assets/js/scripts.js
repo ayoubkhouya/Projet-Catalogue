@@ -12,6 +12,16 @@ function addToBasket(id) {
                 showConfirmButton: false,
                 timer: 1500
             });
+        },
+        error: function() {
+            Swal.fire({
+                position: top,
+                icon: 'error',
+                title: 'Problème servenue',
+                text: "Impossible d'ajouter ce produit au panier",
+                showConfirmButton: false,
+                timer: 1500
+            });
         }
     });
 }
