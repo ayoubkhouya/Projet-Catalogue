@@ -2,6 +2,7 @@ package fr.catalogue.beans;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -21,6 +22,10 @@ public class Panier implements Serializable {
 
     @OneToMany
     private Collection<Produit> produits;
+
+    public Panier() {
+        this.produits = new ArrayList<>();
+    }
 
     public long getId() {
         return id;

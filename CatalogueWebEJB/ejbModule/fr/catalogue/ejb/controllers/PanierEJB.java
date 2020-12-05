@@ -2,6 +2,7 @@ package fr.catalogue.ejb.controllers;
 
 import fr.catalogue.beans.Panier;
 import fr.catalogue.beans.Produit;
+import fr.catalogue.ejb.interfaces.remote.PanierRemote;
 
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
@@ -10,9 +11,9 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 
-@Remote
+
 @Stateless
-public class PanierEJB {
+public class PanierEJB implements PanierRemote {
 
     @PersistenceContext(unitName = "catalogueManager")
     EntityManager mh;
@@ -23,6 +24,7 @@ public class PanierEJB {
         return panier;
     }
 
+    @Override
     public boolean enregistrerPanier(Panier panier) {
         try {
             mh.persist(panier);
@@ -32,6 +34,7 @@ public class PanierEJB {
         }
     }
 
+    @Override
     public Produit getProduit(int id) {
         Query query = mh.createQuery("SELECT p FROM Produit p WHERE p.id=:id").setParameter("id", id);
         return (Produit) query.getSingleResult();

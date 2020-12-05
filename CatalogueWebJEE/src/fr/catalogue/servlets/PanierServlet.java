@@ -3,6 +3,7 @@ package fr.catalogue.servlets;
 import fr.catalogue.beans.Panier;
 import fr.catalogue.beans.Produit;
 import fr.catalogue.ejb.controllers.PanierEJB;
+import fr.catalogue.ejb.interfaces.remote.PanierRemote;
 import fr.catalogue.global.AppContext;
 import fr.catalogue.global.EnumEJB;
 import fr.catalogue.interfaces.PanierMethodes;
@@ -21,7 +22,7 @@ public class PanierServlet extends HttpServlet implements PanierMethodes {
 
     private static final long serialVersionUID = -2543996090073074652L;
 
-    private PanierEJB panierRemote;
+    private PanierRemote panierRemote;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -61,19 +62,19 @@ public class PanierServlet extends HttpServlet implements PanierMethodes {
 
     @Override
     public Panier getPanier(int id) {
-        panierRemote = (PanierEJB) AppContext.getRemote(PanierEJB.class, EnumEJB.PANIER.getEjbName());
+        panierRemote = (PanierRemote) AppContext.getRemote(PanierRemote.class, EnumEJB.PANIER.getEjbName());
         return panierRemote.getPanier(id);
     }
 
     @Override
     public Produit addProduitToPanier(int id) {
-        panierRemote = (PanierEJB) AppContext.getRemote(PanierEJB.class, EnumEJB.PANIER.getEjbName());
+        panierRemote = (PanierRemote) AppContext.getRemote(PanierRemote.class, EnumEJB.PANIER.getEjbName());
         return panierRemote.getProduit(id);
     }
 
     @Override
     public Produit getProduitFromPanier(int id) {
-        panierRemote = (PanierEJB) AppContext.getRemote(PanierEJB.class, EnumEJB.PANIER.getEjbName());
+        panierRemote = (PanierRemote) AppContext.getRemote(PanierRemote.class, EnumEJB.PANIER.getEjbName());
         return panierRemote.getProduit(id);
     }
 
