@@ -5,7 +5,6 @@
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@include file="template/header.jsp" %>
-<%@include file="../assets/css/style.css"%>
 
 <script src="../assets/js/scripts.js"></script>
 <div class="container">
@@ -16,9 +15,6 @@
     </h3>
 
     <form action="" method="GET">
-        <div class="imgcontainer">
-            <img src="img_avatar2.png" alt="Avatar" class="avatar">
-        </div>
         <div class="form-group">
             <label for="name"><b>Nom</b></label>
             <input type="text" class="form-control" id="name" placeholder="Votre nom" name="name" required>

@@ -12,7 +12,7 @@ function addToBasket(id) {
 function deleteProduct(id) {
     $.ajax({
         url: '/panier',
-        data: id,
+        data: {remove: id},
         method: 'POST',
         succes: function() {
             alert("Product removed ! ");

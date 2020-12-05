@@ -51,7 +51,7 @@
                     else {
                     Client client = (Client) session.getAttribute("client");
                 %>
-                    <h5 class="text-info mr-sm-2"> <%= client.getNom() %> </h5>
+                    <h5 class="text-primary font-weight-bold mr-sm-2"> <%= client.getNom() %> | </h5>
                     <a title="créer compte" class="text-danger mr-sm-2" href=${pageContext.request.contextPath}/client?logout">Déconnexion <i class="fas fa-sign-out-alt"></i></a>
                 <%
                     }

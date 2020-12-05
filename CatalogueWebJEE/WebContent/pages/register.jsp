@@ -34,7 +34,7 @@
         </div>
         <div class="form-group">
             <label for="phone"><b>Téléphone</b></label>
-            <input type="text" class="form-control" id="phone" placeholder="Votre numéro de téléphone (Format: 07 XX XX XX XX)" name="phone" pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" required>
+            <input type="text" class="form-control" id="phone" placeholder="Votre numéro de téléphone" name="phone" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" required>
             <div class="valid-feedback">Champ <b>Téléphone</b> valide</div>
             <div class="invalid-feedback">Veuillez renseigner le champ <b>Téléphone</b>.</div>
         </div>
