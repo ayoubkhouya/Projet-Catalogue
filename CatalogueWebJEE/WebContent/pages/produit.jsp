@@ -29,7 +29,7 @@
                                 <p class="card-text">
                                     <%= produit.getDescription() %>
                                 </p>
-                                <a href="#" class="btn btn-success">
+                                <a onclick="addToBasket(<%= produit.getId() %>)" href="#" class="btn btn-success">
                                     <i class='fas fa-shopping-cart'></i>
                                     Ajouter un panier
                                 </a>
