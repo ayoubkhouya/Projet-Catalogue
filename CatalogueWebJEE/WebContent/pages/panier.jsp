@@ -46,7 +46,7 @@
                     <td>Musique</td>
                     <td><input style="max-width: 60px" type="number" min="1"value="1"></td>
                     <td><strong>5.86 €</strong></td>
-                    <td><a href="#"><i title="Supprimer" style="color: red" class="fas fa-trash-alt"></i></a></td>
+                    <td><a onclick="deleteProduct(id)" href="#"><i title="Supprimer" style="color: red" class="fas fa-trash-alt"></i></a></td>
                 </tr>
             </tbody>
             <hr>
@@ -71,4 +71,5 @@
     </div>
 </div>
 
+<script src="../assets/js/scripts.js"></script>
 <%@include file="template/footer.jsp" %>

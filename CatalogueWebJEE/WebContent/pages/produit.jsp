@@ -61,4 +61,5 @@
 
 </div>
 
+<script src="../assets/js/scripts.js"></script>
 <%@include file="template/footer.jsp"%>
