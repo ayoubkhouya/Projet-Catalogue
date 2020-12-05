@@ -25,7 +25,12 @@ public class PanierServlet extends HttpServlet implements PanierMethodes {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
+        // Session
+        HttpSession session = req.getSession(true);
+
+        Map<String, String[]> mapParams = req.getParameterMap();
+
+        req.getRequestDispatcher("/pages/panier.jsp").forward(req, resp);
     }
 
     @Override

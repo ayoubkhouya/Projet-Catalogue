@@ -27,10 +27,14 @@ public class ClientServlet extends HttpServlet implements ClientMethodes {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Map<String, String[]> param = req.getParameterMap();
+        if (param.containsKey("signin")) {
+            req.getRequestDispatcher("/pages/register.jsp").forward(req, resp);
+        }
         if (param.containsKey("logout")) {
             req.getSession(true).setAttribute("client", null);
             resp.sendRedirect("/home");
         }
+
     }
 
     @Override
