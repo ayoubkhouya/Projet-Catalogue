@@ -19,6 +19,7 @@
         <%
             Panier basket = (Panier) session.getAttribute("panier");
             if (basket != null) {
+                if (!basket.getProduits().isEmpty()) {
 
         %>
     <div class="row">
@@ -79,7 +80,17 @@
     </div>
 
     <%
-        } else {
+                } else {
+
+                    %>
+
+                        <div class="row alert alert-danger" role="alert">
+                            Panier vide !
+                        </div>
+
+                    <%
+                }
+            } else {
 
     %>
         <div class="row alert alert-danger" role="alert">

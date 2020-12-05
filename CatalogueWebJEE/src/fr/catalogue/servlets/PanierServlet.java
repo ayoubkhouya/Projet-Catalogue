@@ -66,7 +66,7 @@ public class PanierServlet extends HttpServlet implements PanierMethodes {
 
                 panier.getProduits().remove(Integer.parseInt(mapParams.get("remove")[0]));
                 session.setAttribute("panier", panier);
-                resp.sendRedirect("/home");
+
             }
         }
 
