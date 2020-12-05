@@ -1,10 +1,17 @@
 function addToBasket(id) {
+    var name = $("#name").html();
     $.ajax({
         url: '/panier',
         method: 'POST',
         data: {add: id},
         success: function() {
-            alert("Product added to basket!");
+            Swal.fire({
+                position: 'top',
+                icon: 'success',
+                title: '<br>' + name + '<br>' + '\n ajouté avec succès au panier',
+                showConfirmButton: false,
+                timer: 1500
+            });
         }
     });
 }
@@ -18,4 +25,8 @@ function deleteProduct(id) {
             alert("Product removed ! ");
         }
     })
+}
+
+function goBack() {
+    window.history.back();
 }

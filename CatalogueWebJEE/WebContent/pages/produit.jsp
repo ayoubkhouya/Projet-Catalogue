@@ -26,7 +26,7 @@
                         <div class="card" style="width: 18rem;">
                             <img class="card-img-top" src="../assets/images/cd.png" alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title"><%= produit.getNom() %></h5>
+                                <h5 id="name" class="card-title"><%= produit.getNom() %></h5>
                                 <p class="card-text">
                                     <%= produit.getDescription() %>
                                 </p>

@@ -34,13 +34,16 @@
             <tbody>
 
             <%
+                float total = 0;
+                float shipping = 10.25F;
                 for (Produit produit : basket.getProduits()) {
+                    total += produit.getPrix();
             %>
 
                 <tr>
                     <td scope="row"> <%= produit.getId() %> </td>
                     <td> <%= produit.getNom() %> </td>
-                    <td> <%= produit.getCategorie().getName() %> </td>
+                    <td> <%= produit.getCategorie().getName().toUpperCase() %> </td>
                     <td> 1 </td>
                     <td><strong><%= produit.getPrix() %> €</strong></td>
                     <td><a href="#"><i title="Supprimer" style="color: red" class="fas fa-trash-alt"></i></a></td>
@@ -51,20 +54,23 @@
             </tbody>
             <hr>
             <tr>
-                <th scope="col">Total: </th>
+                <th scope="col">Total: <%= total %> €</th>
             </tr>
             <tr>
-                <th scope="col">Frais de livraison: </th>
+                <th scope="col">Frais de livraison: <%= shipping %> € </th>
+            </tr><hr>
+            <tr>
+                <th scope="col" bgcolor="#f0fff0">Total à payer : <%= total + shipping %> €</th>
             </tr>
         </table>
     </div>
 
     <div class="row">
         <button class="btn btn-lg btn-success">
-            <i class='fas fa-euro-sign'></i>
+            <i class='fas fa-credit-card'></i>
             Passer la commande
         </button>
-        <button class="ml-3 btn btn-lg btn-warning">
+        <button onclick="goBack()" class="ml-3 btn btn-lg btn-warning">
             <i class='fas fa-shopping-cart'></i>
             Continuer l'achat
         </button>
