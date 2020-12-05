@@ -3,8 +3,8 @@ function addToBasket(id) {
         url: '/panier',
         method: 'POST',
         data: {add: id},
-        succes: function() {
-            alert("Product added to basket!")
+        success: function() {
+            alert("Product added to basket!");
         }
     });
 }
@@ -14,7 +14,7 @@ function deleteProduct(id) {
         url: '/panier',
         data: {remove: id},
         method: 'POST',
-        succes: function() {
+        success: function() {
             alert("Product removed ! ");
         }
     })
