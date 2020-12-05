@@ -32,7 +32,7 @@
                                 </p>
                                 <a onclick="addToBasket(<%= produit.getId() %>)" href="#" class="btn btn-success">
                                     <i class='fas fa-shopping-cart'></i>
-                                    Ajouter un panier
+                                    Ajouter au panier
                                 </a>
                             </div>
                         </div>
@@ -44,10 +44,9 @@
                                 Informations complémentaires
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Capacité: </li>
-                                <li class="list-group-item">Type: <%= produit.getCategorie().getName() %> </li>
-                                <li class="list-group-item">Auteur: </li>
-                                <li class="list-group-item">Prix: <%= produit.getPrix() %> €</li>
+                                <li class="list-group-item">Catégorie <b>: <%= produit.getCategorie().getName().toUpperCase() %> </b></li>
+                                <li class="list-group-item">Auteur:<b> John Michel </b></li>
+                                <li class="list-group-item">Prix: <b> <%= produit.getPrix() %> €</b></li>
                             </ul>
                         </div>
                     </div>

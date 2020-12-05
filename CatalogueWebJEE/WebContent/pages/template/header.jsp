@@ -38,12 +38,9 @@
                     <a class="nav-link" href="${pageContext.request.contextPath}/categories">Catégories</a>
                 </li>
                 <li class="nav-item text-bold ml-12">
-                    <a class="btn btn-light nav-link" href="${pageContext.request.contextPath}/panier">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-basket" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-					  <path fill-rule="evenodd" d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"></path>
-					</svg>
-                     Panier
-                     <span class="badge badge-danger" style="margin-bottom: 3px;">
+                    <a class="nav-link text-primary" href="${pageContext.request.contextPath}/panier">
+                    <i class="fas fa-shopping-basket"></i> Panier
+                     <span class="badge badge-danger">
                         <% if (panier != null )
                             {
                         %>
@@ -63,14 +60,14 @@
                 <%
                     if(session.getAttribute("client") == null) {
                 %>
-                    <a title="se connecter" class="mr-sm-4" href="#">Connexion <i class="fas fa-sign-in-alt"></i></a>
-                    <a title="créer compte" class="text-info mr-sm-3" href="${pageContext.request.contextPath}/client?signin">Créer compte <i class="fas fa-user-plus"></i></a>
+                    <a title="Se connecter" class="mr-sm-4" href="#">Connexion <i class="fas fa-sign-in-alt"></i></a>
+                    <a title="Créer compte" class="text-info mr-sm-3" href="${pageContext.request.contextPath}/client?signin">Créer compte <i class="fas fa-user-plus"></i></a>
                 <% }
                     else {
                     Client client = (Client) session.getAttribute("client");
                 %>
-                    <h5 class="text-primary font-weight-bold mr-sm-2"> <%= client.getNom() %> | </h5>
-                    <a title="créer compte" class="text-danger mr-sm-2" href=${pageContext.request.contextPath}/client?logout">Déconnexion <i class="fas fa-sign-out-alt"></i></a>
+                    <span class="mr-sm-2 mr-1 text-dark"> <i class="fas fa-user"></i> <%= client.getNom() %> | </span>
+                    <a title="Déconnexion" class="text-danger mr-sm-2" href=${pageContext.request.contextPath}/client?logout>Déconnexion <i class="fas fa-sign-out-alt"></i></a>
                 <%
                     }
                 %>

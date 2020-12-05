@@ -23,9 +23,9 @@
                 for (Categorie cat : categories) {
                 %>
                      <a style="color: white" href=${pageContext.request.contextPath}<%= "/categories?id=" + cat.getId() %> >
-                         <div class="ml-lg-12 mb-lg-5 card bg-info">
+                         <div class="ml-lg-12 mb-lg-5 card btn btn-outline-success">
                              <div class="card-body text-center">
-                                 <strong><h4 class="card-title"> <%=cat.getName() %> </h4></strong>
+                                 <strong><h4 class="card-title text-dark"> <b> <%=cat.getName() %> </b> </h4></strong>
                                  <p class="card-text"> <%=cat.getDescrition() %> </p>
                              </div>
                          </div>

@@ -6,7 +6,7 @@ function addToBasket(id) {
         data: {add: id},
         success: function() {
             Swal.fire({
-                position: 'top',
+                position: 'center',
                 icon: 'success',
                 title: 'Le produit est ajouté avec succès au panier',
                 showConfirmButton: false,
@@ -46,11 +46,13 @@ function deleteProduct(id) {
                 data: {remove: id},
                 method: 'POST'
             });
-            Swal.fire(
-                'Supprimé!',
-                'Votre produit a été supprimé avec succès',
-                'success'
-            );
+            Swal.fire({
+                position: 'top',
+                icon: 'success',
+                title: 'Produit supprimé avec succès',
+                showConfirmButton: false,
+                timer: 1500
+            });
             setTimeout(() => {
                 window.location.reload();
             }, 1800)
