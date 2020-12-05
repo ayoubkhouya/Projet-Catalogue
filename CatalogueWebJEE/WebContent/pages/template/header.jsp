@@ -3,6 +3,7 @@
   User: Ayoub KHOUYA | Hamza HRAMCHI
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="fr.catalogue.beans.Client" %>
 <html>
 
 <head>
@@ -41,9 +42,20 @@
                 </li>
             </ul>
             <div class="form-inline my-3 my-lg-0">
-                <a title="se connecter" class="mr-sm-4" href="#">Connexion <i class="fas fa-sign-in-alt"></i></a>
-                <a title="créer compte" class="text-info mr-sm-3" href="../pages/register.jsp">Créer compte <i class="fas fa-user-plus"></i></a>
-                <a title="créer compte" class="text-danger mr-sm-2" href="../pages/register.jsp">Déconnexion <i class="fas fa-sign-out-alt"></i></a>
+                <%
+                    if(session.getAttribute("client") == null) {
+                %>
+                    <a title="se connecter" class="mr-sm-4" href="#">Connexion <i class="fas fa-sign-in-alt"></i></a>
+                    <a title="créer compte" class="text-info mr-sm-3" href="../pages/register.jsp">Créer compte <i class="fas fa-user-plus"></i></a>
+                <% }
+                    else {
+                    Client client = (Client) session.getAttribute("client");
+                %>
+                    <h5 class="text-info mr-sm-2"> <%= client.getNom() %> </h5>
+                    <a title="créer compte" class="text-danger mr-sm-2" href=${pageContext.request.contextPath}<%= "/client?logout"%>>Déconnexion <i class="fas fa-sign-out-alt"></i></a>
+                <%
+                    }
+                %>
             </div>
         </div>
 

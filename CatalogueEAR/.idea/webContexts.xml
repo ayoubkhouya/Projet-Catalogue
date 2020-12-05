@@ -3,6 +3,7 @@
   <component name="WebContextManager">
     <option name="state">
       <map>
+        <entry key="file://$PROJECT_DIR$/../CatalogueWebJEE/WebContent/pages/categorie.jsp" value="file://$PROJECT_DIR$/../CatalogueWebJEE/WebContent/pages" />
         <entry key="file://$PROJECT_DIR$/../CatalogueWebJEE/WebContent/pages/panier.jsp" value="file://$PROJECT_DIR$/../CatalogueWebJEE/WebContent/pages" />
         <entry key="file://$PROJECT_DIR$/../CatalogueWebJEE/WebContent/pages/produits.jsp" value="file://$PROJECT_DIR$/../CatalogueWebJEE/WebContent/pages" />
       </map>

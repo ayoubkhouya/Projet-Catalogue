@@ -31,12 +31,12 @@ public class ClientEJB implements ClientLocal, ClientRemote {
     }
 
     @Override
-    public boolean enregisterClient(Client client) {
+    public Client enregisterClient(Client client) {
         try {
             mh.persist(client);
-            return true;
+            return client;
         } catch (Exception e) {
-            return false;
+            return null;
         }
     }
 }

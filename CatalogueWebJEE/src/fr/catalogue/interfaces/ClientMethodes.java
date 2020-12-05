@@ -4,7 +4,7 @@ import fr.catalogue.beans.Client;
 
 public interface ClientMethodes {
 
-    boolean registerClient(Client client);
+    Client registerClient(Client client);
     Client getClient(Client client);
     Client getClientById(int id);
 
