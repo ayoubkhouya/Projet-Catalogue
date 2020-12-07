@@ -69,10 +69,12 @@
     </div>
 
     <div class="row">
-        <button class="btn btn-lg btn-success">
-            <i class='fas fa-credit-card'></i>
-            Passer la commande
-        </button>
+        <form action="/commande?passer" method="post">
+            <button class="btn btn-lg btn-success">
+                <i class='fas fa-credit-card'></i>
+                Passer la commande
+            </button>
+        </form>
         <button onclick="goBack()" class="ml-3 btn btn-lg btn-warning">
             <i class='fas fa-shopping-cart'></i>
             Continuer l'achat
