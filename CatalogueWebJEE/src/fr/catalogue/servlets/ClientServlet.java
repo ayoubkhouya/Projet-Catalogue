@@ -65,14 +65,14 @@ public class ClientServlet extends HttpServlet implements ClientMethodes {
         } else {
             nom = req.getParameter("name");
             email = req.getParameter("email");
-            String adresse = (String) req.getParameter("adress");
-            String telephone = (String) req.getParameter("phone");
+            String adresse = req.getParameter("adress");
+            String telephone = req.getParameter("phone");
             client = (registerClient(new Client(nom, email, adresse, telephone)));
             if (client != null) {
                 session.setAttribute("client", client);
                 resp.sendRedirect("/home");
             } else {
-                System.out.println("Error While Registering");
+                req.getRequestDispatcher("/pages/register.jsp").forward(req, resp);
             }
         }
 
@@ -82,7 +82,12 @@ public class ClientServlet extends HttpServlet implements ClientMethodes {
     @Override
     public Client registerClient(Client client) {
         clientRemote = (ClientRemote) AppContext.getRemote(ClientRemote.class, EnumEJB.CLIENTEJB.getEjbName());
-        return clientRemote.enregisterClient(client);
+        try {
+            Client cl = clientRemote.enregisterClient(client);
+            return cl;
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     @Override

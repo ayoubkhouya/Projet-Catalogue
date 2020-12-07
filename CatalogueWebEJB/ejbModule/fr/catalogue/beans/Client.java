@@ -26,10 +26,11 @@ public class Client implements Serializable {
     @Column(nullable = false)
     private int id;
 
-    @Column(nullable = false)
+
+    @Column(nullable = false, unique = true)
     private String nom;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String email;
 
     @Column(nullable = false)
