@@ -19,5 +19,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jquery"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/a076d05399"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/tailwindcss"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/html2pdf.js"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -4,5 +4,6 @@
 	<contentEntry url="file://$MODULE_DIR$"/>
 	<levels>
 		<level name="Java EE 6-Java EE 6" value="project"/>
+		<level name="tailwindcss" value="project"/>
 	</levels>
 </component>

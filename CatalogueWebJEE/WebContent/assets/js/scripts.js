@@ -47,7 +47,7 @@ function deleteProduct(id) {
                 method: 'POST'
             });
             Swal.fire({
-                position: 'top',
+                position: 'center',
                 icon: 'success',
                 title: 'Produit supprimé avec succès',
                 showConfirmButton: false,

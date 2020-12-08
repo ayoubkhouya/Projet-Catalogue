@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="fr.catalogue.beans.Produit" %><%--
+<%@ page import="fr.catalogue.beans.Produit" %>
+<%@ page import="java.util.Locale" %><%--
   Created by IntelliJ IDEA | Eclipse IDE.
   User: Ayoub KHOUYA | Hamza HRAMCHI
 --%>
@@ -31,7 +32,7 @@
                         <div class="ml-md-5 mb-md-5 produit border border-secondary rounded">
                             <h4 class="text-bold">Produit N°: <%= i +=1 %></h4>
                             <div class="card" >
-                                <img class="card-img-top"  src="../assets/images/cd.png">
+                                <img class="card-img-top"  src=<%= "../assets/images/" + produit.getCategorie().getName().toLowerCase() + ".png" %>>
                                 <div class="card-body">
                                     <h5 class="card-title"><%= produit.getNom() %></h5>
                                     <p class="card-text">
