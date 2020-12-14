@@ -30,7 +30,26 @@ public class CommandeServlet extends HttpServlet implements CommandeMethodes {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
+        Map<String, String[]> param = req.getParameterMap();
+        Panier panier = null;
+        Client client = null;
+
+        if (param.containsKey("payer")) {
+
+            try {
+
+                panier = (Panier) req.getSession().getAttribute("panier");
+                client = (Client) req.getSession().getAttribute("client");
+                req.getRequestDispatcher("/pages/confirmation.jsp").forward(req, resp);
+
+            } catch (Exception e) {
+                resp.sendRedirect("/home");
+            }
+
+        } if (param.isEmpty()) {
+            resp.sendRedirect("/home");
+        }
+
     }
 
     @Override
@@ -60,7 +79,6 @@ public class CommandeServlet extends HttpServlet implements CommandeMethodes {
                         command.setDate_creation(Timestamp.valueOf(LocalDateTime.now()));
                         command.setMontant(panier.getMontant());
                         enregistrerCommande(command);
-                        System.out.println("No conf: " + AppContext.getRandomNoConfirmation());
                         req.getRequestDispatcher("/pages/enregistrement.jsp").forward(req, resp);
                     }
                 }
