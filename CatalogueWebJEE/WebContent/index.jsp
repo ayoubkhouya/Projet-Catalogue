@@ -15,11 +15,11 @@
         <div class="container-fluid" data-aos="fade-up">
             <div class="row justify-content-center">
                 <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                    <h2 class="text-white">Vous aimez la musique ? Vous voulez regarder un film avec vos amis, vos proches et votre famille ?</h2>
+                    <h2 class="text-white">Vous aimez de la musique ? Vous voulez regarder un film avec vos amis, vos proches et votre famille ?</h2>
                     <h4 class="text-white">Nous vous proposons des CD, DVD et films qui vont vous plaire </h4>
                     <div>
                         <a href="/categories" class="btn-get-started scrollto">
-                            <i class="fas fa-basket"></i> Commencer l'achat
+                            <i class="fas fa-shopping-basket"></i> Commencer l'achat
                         </a>
                     </div>
                 </div>
