@@ -3,6 +3,7 @@
   User: Ayoub KHOUYA | Hamza HRAMCHI
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="template/header.jsp" %>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
 <script src="../assets/js/pdf.js"></script>
@@ -36,3 +37,5 @@
     </div>
 
 </div>
+
+<%@include file="template/footer.jsp" %>

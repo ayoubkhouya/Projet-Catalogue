@@ -13,20 +13,29 @@
         <i class='fas fa-user' style="color: #1717c8"></i>
         <b>Connexion</b>
     </h3>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <img src="../assets/images/user.png" alt="">
+        </div>
+        <div class="col mt-md-5">
+            <form action="/client?login" method="POST">
+                <div class="form-group">
+                    <label for="name"><b>Nom</b></label>
+                    <input type="text" class="form-control" id="name" placeholder="Votre nom" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email"><b>Email</b></label>
+                    <input type="email" class="form-control" id="email" placeholder="Votre Email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <button class="form-control btn btn-success" type="submit"> Connexion </button>
+                </div>
+            </form>
+        </div>
+    </div>
 
-    <form action="/client?login" method="POST">
-        <div class="form-group">
-            <label for="name"><b>Nom</b></label>
-            <input type="text" class="form-control" id="name" placeholder="Votre nom" name="name" required>
-        </div>
-        <div class="form-group">
-            <label for="email"><b>Email</b></label>
-            <input type="email" class="form-control" id="email" placeholder="Votre Email" name="email" required>
-        </div>
-        <div class="form-group">
-            <button class="form-control btn btn-success" type="submit"> Connexion </button>
-        </div>
-    </form>
+    
 </div>
 
 <%@include file="template/footer.jsp" %>
