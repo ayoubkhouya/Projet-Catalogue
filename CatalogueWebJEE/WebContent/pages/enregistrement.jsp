@@ -10,7 +10,7 @@
 <div class="container">
     <h3 class="mb-lg-5 font-weight-light">
         <a href="../index.jsp" title="Page d'accueil">Catalogue web</a> |
-        <i class='fas fa-user-plus' style="color: #1717c8"></i>
+        <i class='fas fa-money-check-alt' style="color: #1717c8"></i>
         <b>Paiement</b>
     </h3>
     <form action="${pageContext.request.contextPath}/commande?payer" method="POST" class="was-validated">
