@@ -5,6 +5,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@include file="template/header.jsp" %>
 
+
 <div class="container">
     <button class="btn btn-info" id="pdf" onclick="getPDF()">Get PDF</button>
     <h3 id="index" class="mb-lg-5 font-weight-light">
@@ -39,11 +40,6 @@
                 <div class="invalid-feedback">Veuillez renseigner le champ <b>CVV</b>.</div>
             </div>
         </div>
-        <div class="form-row">
-            <div class="col-md-6 form-group">
-                <button type="reset" class="form-control btn-block btn btn-warning">Annuler</button>
-            </div>
-        </div>
     </form>
 
     <div class="row">
@@ -51,6 +47,6 @@
     </div>
 </div>
 
-<script src="../assets/js/scripts.js"></script>
 
+<script src="../assets/js/scripts.js"></script>
 <%@include file="template/footer.jsp" %>

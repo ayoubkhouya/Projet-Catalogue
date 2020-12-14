@@ -1,3 +1,20 @@
+function confirmShopping() {
+    Swal.fire({
+        title: 'Etes vous sùr ?',
+        text: "Vous voulez valider votre achat ?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#30ac00',
+        cancelButtonColor: '#d9a919',
+        confirmButtonText: 'Oui, valider!',
+        cancelButtonText: "Non, annuler"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = '/commande?payer';
+        }
+    })
+}
+
 function addToBasket(id) {
     var name = $("#name").html();
     $.ajax({
@@ -64,30 +81,3 @@ function goBack() {
     window.history.back();
 }
 
-function confirmShopping() {
-    Swal.fire({
-        title: 'Etes vous sùr ?',
-        text: "Vous voulez valider votre achat ?",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#30ac00',
-        cancelButtonColor: '#d9a919',
-        confirmButtonText: 'Oui, valider!',
-        cancelButtonText: "Non, annuler"
-    }).then((result) => {
-        if (result.isConfirmed) {
-            $.ajax({
-                url: '/commande?payer',
-                method: 'POST'
-            });
-            Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: 'Produit supprimé avec succès',
-                showConfirmButton: false,
-                timer: 1500
-            });
-        return true;
-        } else return false;
-    })
-}
