@@ -3,7 +3,6 @@ package fr.catalogue.servlets;
 import fr.catalogue.beans.Client;
 import fr.catalogue.beans.Commande;
 import fr.catalogue.beans.Panier;
-import fr.catalogue.beans.Produit;
 import fr.catalogue.ejb.interfaces.remote.CommandeRemote;
 import fr.catalogue.global.AppContext;
 import fr.catalogue.global.EnumEJB;
@@ -17,9 +16,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
 import java.util.Map;
 
 @WebServlet("/commande")
@@ -31,15 +27,17 @@ public class CommandeServlet extends HttpServlet implements CommandeMethodes {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Map<String, String[]> param = req.getParameterMap();
-        Panier panier = null;
-        Client client = null;
+        Commande commande;
 
         if (param.containsKey("payer")) {
 
             try {
 
-                panier = (Panier) req.getSession().getAttribute("panier");
-                client = (Client) req.getSession().getAttribute("client");
+                commande = (Commande) req.getSession().getAttribute("commande");
+                commande.setNo_confirmation(AppContext.getRandomNoConfirmation());
+                req.getSession().setAttribute("commande", commande);
+                req.getSession().setAttribute("panier", null);
+                enregistrerCommande(commande);
                 req.getRequestDispatcher("/pages/confirmation.jsp").forward(req, resp);
 
             } catch (Exception e) {
@@ -57,7 +55,7 @@ public class CommandeServlet extends HttpServlet implements CommandeMethodes {
         Map<String, String[]> param = req.getParameterMap();
         Panier panier = null;
         Client client = null;
-        Commande command = null;
+        Commande command;
 
         if (param.containsKey("passer")) {
             try {
@@ -78,7 +76,7 @@ public class CommandeServlet extends HttpServlet implements CommandeMethodes {
                         command.setProduits(panier.getProduits());
                         command.setDate_creation(Timestamp.valueOf(LocalDateTime.now()));
                         command.setMontant(panier.getMontant());
-                        enregistrerCommande(command);
+                        req.getSession().setAttribute("commande", command);
                         req.getRequestDispatcher("/pages/enregistrement.jsp").forward(req, resp);
                     }
                 }
