@@ -49,4 +49,11 @@ public class Panier implements Serializable {
     public void setProduits(List<Produit> produits) {
         this.produits = produits;
     }
+
+    public float getMontant() {
+        float montant = 0;
+        for (Produit p : produits)
+            montant += p.getPrix();
+        return montant;
+    }
 }

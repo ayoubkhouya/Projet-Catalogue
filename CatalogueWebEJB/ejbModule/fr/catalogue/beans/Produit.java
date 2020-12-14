@@ -31,8 +31,6 @@ public class Produit implements Serializable {
     @OneToOne
     private Categorie categorie;
 
-    @OneToOne
-    private Commande commande;
 
     public int getId() {
         return id;
@@ -82,8 +80,4 @@ public class Produit implements Serializable {
         this.categorie = categorie;
     }
 
-
-    public Commande getCommandes() { return commande; }
-
-    public void setCommandes(Commande commandes) { this.commande = commandes; }
 }

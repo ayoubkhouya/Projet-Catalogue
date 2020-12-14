@@ -22,8 +22,8 @@ public class Commande implements Serializable {
     @Column(nullable = false)
     private Timestamp date_creation;
 
-    @Column(nullable = false)
-    private int no_confirmation;
+    @Column
+    private long no_confirmation;
 
     @OneToOne
     private Client client;
@@ -56,11 +56,11 @@ public class Commande implements Serializable {
         this.date_creation = date_creation;
     }
 
-    public int getNo_confirmation() {
+    public long getNo_confirmation() {
         return no_confirmation;
     }
 
-    public void setNo_confirmation(int no_confirmation) {
+    public void setNo_confirmation(long no_confirmation) {
         this.no_confirmation = no_confirmation;
     }
 

@@ -49,4 +49,17 @@ public class AppContext {
         }
         return remote;
     }
+
+    public static long getRandomNoConfirmation() {
+        // longeur de 10
+        String plage = "0123456789";
+        StringBuilder noConf = new StringBuilder(10);
+
+        for (int i = 0; i < 10; i ++) {
+            int index = (int) (plage.length() * Math.random());
+            noConf.append(plage.charAt(index));
+        }
+
+        return Long.parseLong(String.valueOf(noConf));
+    }
 }

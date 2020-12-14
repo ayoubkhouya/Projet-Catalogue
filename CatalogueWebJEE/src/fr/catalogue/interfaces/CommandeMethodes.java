@@ -4,6 +4,6 @@ import fr.catalogue.beans.Commande;
 
 public interface CommandeMethodes {
 
-    Commande enregistrerCommande();
+    Commande enregistrerCommande(Commande commande);
 
 }

@@ -3,6 +3,10 @@ package fr.catalogue.servlets;
 import fr.catalogue.beans.Client;
 import fr.catalogue.beans.Commande;
 import fr.catalogue.beans.Panier;
+import fr.catalogue.beans.Produit;
+import fr.catalogue.ejb.interfaces.remote.CommandeRemote;
+import fr.catalogue.global.AppContext;
+import fr.catalogue.global.EnumEJB;
 import fr.catalogue.interfaces.CommandeMethodes;
 
 import javax.servlet.ServletException;
@@ -11,12 +15,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 
 @WebServlet("/commande")
 public class CommandeServlet extends HttpServlet implements CommandeMethodes {
 
     private static final long serialVersionUID = 534547274455921165L;
+    private CommandeRemote commandeRemote;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -28,6 +38,7 @@ public class CommandeServlet extends HttpServlet implements CommandeMethodes {
         Map<String, String[]> param = req.getParameterMap();
         Panier panier = null;
         Client client = null;
+        Commande command = null;
 
         if (param.containsKey("passer")) {
             try {
@@ -42,6 +53,14 @@ public class CommandeServlet extends HttpServlet implements CommandeMethodes {
                     } if (panier.getProduits().isEmpty())  {
                         resp.sendRedirect("/categories");
                     } else {
+                        // enregistrer la commande de client
+                        command = new Commande();
+                        command.setClient(client);
+                        command.setProduits(panier.getProduits());
+                        command.setDate_creation(Timestamp.valueOf(LocalDateTime.now()));
+                        command.setMontant(panier.getMontant());
+                        enregistrerCommande(command);
+                        System.out.println("No conf: " + AppContext.getRandomNoConfirmation());
                         req.getRequestDispatcher("/pages/enregistrement.jsp").forward(req, resp);
                     }
                 }
@@ -56,7 +75,13 @@ public class CommandeServlet extends HttpServlet implements CommandeMethodes {
 
 
     @Override
-    public Commande enregistrerCommande() {
-        return null;
+    public Commande enregistrerCommande(Commande commande) {
+        commandeRemote = (CommandeRemote) AppContext.getRemote(CommandeRemote.class, EnumEJB.COMMANDEEJB.getEjbName());
+        try {
+            Commande cmd = commandeRemote.enregistrerCommande(commande);
+            return cmd;
+        } catch (Exception e) {
+            return null;
+        }
     }
 }

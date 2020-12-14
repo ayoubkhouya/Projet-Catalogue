@@ -4,7 +4,7 @@ public enum EnumEJB {
 
     PRODUITEJB("ProduitEJB"),
     CATEGORIEEJB(""),
-    COMMANDEEJB(""),
+    COMMANDEEJB("CommandeEJB"),
     PANIER("PanierEJB"),
     CLIENTEJB("ClientEJB");
 
