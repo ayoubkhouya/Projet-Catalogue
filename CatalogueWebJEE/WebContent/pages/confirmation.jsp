@@ -37,8 +37,6 @@
                 <th scope="col">Total : <%= commande.getMontant() %> €</th>
                 <th scope="col">Référence : <%= commande.getNo_confirmation() %></th>
             </tr>
-
-
         </table>
     </div>
 

@@ -10,7 +10,9 @@ function confirmShopping() {
         cancelButtonText: "Non, annuler"
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location = '/commande?payer';
+            return true;
+        } else {
+            return false;
         }
     })
 }

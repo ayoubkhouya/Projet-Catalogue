@@ -40,11 +40,11 @@
                 <div class="invalid-feedback">Veuillez renseigner le champ <b>CVV</b>.</div>
             </div>
         </div>
+        <div class="form-group">
+            <button onsubmit="return confirmShopping()" type="submit" class="form-control btn btn-block btn-success">Payer</button>
+        </div>
     </form>
 
-    <div class="row">
-        <button onclick="confirmShopping()" class="btn btn-block btn-success">Payer</button>
-    </div>
 </div>
 
 
