@@ -87,6 +87,9 @@ public class CommandeServlet extends HttpServlet implements CommandeMethodes {
                 resp.sendRedirect("/client?login");
             }
         }
+        if (param.containsKey("payer")) {
+            doGet(req, resp);
+        }
     }
 
 
