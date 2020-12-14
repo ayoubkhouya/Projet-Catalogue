@@ -5,10 +5,9 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@include file="template/header.jsp" %>
 
-
-<script src="../assets/js/scripts.js"></script>
 <div class="container">
-    <h3 class="mb-lg-5 font-weight-light">
+    <button class="btn btn-info" id="pdf" onclick="getPDF()">Get PDF</button>
+    <h3 id="index" class="mb-lg-5 font-weight-light">
         <a href="../index.jsp" title="Page d'accueil">Catalogue web</a> |
         <i class='fas fa-money-check-alt' style="color: #1717c8"></i>
         <b>Paiement</b>
@@ -42,13 +41,16 @@
         </div>
         <div class="form-row">
             <div class="col-md-6 form-group">
-                <button type="submit" class="form-control btn btn-success">Payer</button>
-            </div>
-            <div class="col-md-6 form-group">
-                <button type="reset" class="form-control btn btn-danger">Annuler</button>
+                <button type="reset" class="form-control btn-block btn btn-warning">Annuler</button>
             </div>
         </div>
-
     </form>
+
+    <div class="row">
+        <button onclick="confirmShopping()" class="btn btn-block btn-success">Payer</button>
+    </div>
 </div>
+
+<script src="../assets/js/scripts.js"></script>
+
 <%@include file="template/footer.jsp" %>

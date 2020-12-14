@@ -75,10 +75,12 @@
                 Passer la commande
             </button>
         </form>
-        <button onclick="goBack()" class="ml-3 btn btn-lg btn-warning">
-            <i class='fas fa-shopping-cart'></i>
-            Continuer l'achat
-        </button>
+        <form action="/categories" method="get">
+            <button class="ml-3 btn btn-lg btn-warning">
+                <i class='fas fa-shopping-cart'></i>
+                Continuer l'achat
+            </button>
+        </form>
     </div>
 
     <%

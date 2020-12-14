@@ -6,30 +6,29 @@
 
 <%@include file="pages/template/header.jsp" %>
 
-<div class="container">
-    <div class="row mb-2">
-        <h2 class="font-weight-light">
-            <a href="../index.jsp" title="Page d'accueil">Catalogue web</a> |
-            <i class='fas fa-home' style="color: #1717c8"></i>
-            Bienvenue dans ma boutique <b>Catalogue Web</b>
-        </h2>
-    </div>
-    <div  style="position: center; width: 100%; height: 100%" id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class=".flex-lg-row carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-90" src="assets/images/1.png">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-90" src="assets/images/2.png">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-90" src="assets/images/3.png">
-            </div>
-        </div>
-    </div>
-</div>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="../assets/js/bootstrap.js"></script>
+    <section id="hero" class="d-flex align-items-center">
+
+        <div class="container-fluid" data-aos="fade-up">
+            <div class="row justify-content-center">
+                <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                    <h2 class="text-white">Vous aimez la musique ? Vous voulez regarder un film avec vos amis, vos proches et votre famille ?</h2>
+                    <h4 class="text-white">Nous vous proposons des CD, DVD et films qui vont vous plaire </h4>
+                    <div>
+                        <a href="/categories" class="btn-get-started scrollto">
+                            <i class="fas fa-basket"></i> Commencer l'achat
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="150">
+                    <img src="assets/images/1.png" class="animated img-fluid" alt="">
+                </div>
+            </div>
+
+        </div>
+    </section>
 
 <%@include file="pages/template/footer.jsp" %>

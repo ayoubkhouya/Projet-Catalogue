@@ -20,5 +20,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/a076d05399"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/tailwindcss"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/html2pdf.js"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/sweetalert2"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jspdf"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

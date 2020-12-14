@@ -24,7 +24,7 @@
                     <div class="col-md-6">
                         <h2 class="text-bold">Produit : <%= produit.getId() %> </h2>
                         <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="../assets/images/cd.png" alt="Card image cap">
+                            <img class="card-img-top" src=<%= "../assets/images/" + produit.getCategorie().getName().toLowerCase() + ".png" %> >
                             <div class="card-body">
                                 <h5 class="card-title"><%= produit.getNom() %></h5>
                                 <p class="card-text">
