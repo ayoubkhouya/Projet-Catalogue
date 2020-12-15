@@ -1,12 +1,3 @@
----------------------------------------------------------
--------       Script BDD catalogue web     --------------
---- Nom de la base de données : catalogue 
----------------------------------------------------------
-
---------------------------------------------------------
------------ HRAMCHI Hamza | KHOUYA Ayoub ---------------
---------------------------------------------------------
-
 -- --------------------------------------------------------
 -- Hôte :                        127.0.0.1
 -- Version du serveur:           10.3.16-MariaDB - mariadb.org binary distribution
@@ -54,11 +45,9 @@ CREATE TABLE IF NOT EXISTS `client` (
   UNIQUE KEY `UK_byyr8p382xxbpeph2ra0c27eb` (`nom`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Listage des données de la table catalogue.client : 1 rows
+-- Listage des données de la table catalogue.client : 0 rows
 DELETE FROM `client`;
 /*!40000 ALTER TABLE `client` DISABLE KEYS */;
-INSERT INTO `client` (`id`, `adresse`, `email`, `nom`, `telephone`) VALUES
-	(1, '174 rue michel Ange', 'user@catalogueweb.fr', 'user', '0751324711');
 /*!40000 ALTER TABLE `client` ENABLE KEYS */;
 
 -- Listage de la structure de la table catalogue. client_commande
@@ -102,16 +91,6 @@ CREATE TABLE IF NOT EXISTS `commande_produit` (
 DELETE FROM `commande_produit`;
 /*!40000 ALTER TABLE `commande_produit` DISABLE KEYS */;
 /*!40000 ALTER TABLE `commande_produit` ENABLE KEYS */;
-
--- Listage de la structure de la table catalogue. hibernate_sequence
-CREATE TABLE IF NOT EXISTS `hibernate_sequence` (
-  `next_val` bigint(20) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- Listage des données de la table catalogue.hibernate_sequence : 0 rows
-DELETE FROM `hibernate_sequence`;
-/*!40000 ALTER TABLE `hibernate_sequence` DISABLE KEYS */;
-/*!40000 ALTER TABLE `hibernate_sequence` ENABLE KEYS */;
 
 -- Listage de la structure de la table catalogue. panier
 CREATE TABLE IF NOT EXISTS `panier` (
