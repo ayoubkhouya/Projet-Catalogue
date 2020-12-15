@@ -7,7 +7,6 @@
 
 
 <div class="container">
-    <button class="btn btn-info" id="pdf" onclick="getPDF()">Get PDF</button>
     <h3 id="index" class="mb-lg-5 font-weight-light">
         <a href="../index.jsp" title="Page d'accueil">Catalogue web</a> |
         <i class='fas fa-money-check-alt' style="color: #1717c8"></i>

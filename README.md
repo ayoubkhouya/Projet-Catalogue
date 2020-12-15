@@ -1,4 +1,12 @@
+ # ---------------------------------------------------------------------------
 # Projet-Catalogue
-Projet Cataloge Java JEE
+# Ce projet est réalisé par :
+# HRAMCHI Hamza
+# KHOUYA Ayoub
+Groupe TD2 | TP 2.2
+ # ---------------------------------------------------------------------------
 
-# HRAMCHI Hamza | KHOUYA Ayoub
+ # ---------------------------------------------------------------------------
+1- Lancer le script de la BDD
+2- Login avec : user / user@catalogueweb.fr
+ # ---------------------------------------------------------------------------
